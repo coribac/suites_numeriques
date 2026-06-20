@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المتتاليات العددية - تطبيق مستقل</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="side-nav" aria-label="التنقل الرئيسي">
+      <div class="brand"><span>Un</span><div><strong>المتتاليات العددية</strong><small>نهائي علمي وأدبي وتسيير</small></div></div>
+      <button class="nav-btn active" type="button" data-view="home"><span>الرئيسية</span><small>نظرة عامة</small></button>
+      <button class="nav-btn" type="button" data-view="learn"><span>التعلم</span><small>الدروس والأنشطة</small></button>
+      <button class="nav-btn" type="button" data-view="practice"><span>التمارين</span><small>تدريب مباشر</small></button>
+      <button class="nav-btn" type="button" data-view="bac"><span>بكالوريا</span><small>نماذج تطبيقية</small></button>
+      <button class="nav-btn" type="button" data-view="progress"><span>تقدمي</span><small>ما أنجزته</small></button>
+      <button class="nav-btn teacher-nav" type="button" data-view="teacher"><span>واجهة الأستاذ</span><small>إدارة العرض</small></button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <span class="kicker">السنة الثالثة ثانوي</span>
+          <h1>باب المتتاليات العددية</h1>
+          <p class="view-crumb" id="currentViewLabel">الرئيسية</p>
+        </div>
+        <div class="branch-switch" role="group" aria-label="اختيار الشعبة">
+          <button class="active" type="button" data-branch="science">علمي</button>
+          <button type="button" data-branch="literary">أدبي</button>
+          <button type="button" data-branch="management">تسيير واقتصاد</button>
+        </div>
+      </header>
+
+      <section class="view active" id="homeView">
+        <section class="hero sequence-hero">
+          <div class="progress-ring"><strong id="homePercent">0%</strong><span>إنجاز</span></div>
+          <div><span class="pill">مسار مستقل</span><h2 id="homeTitle">مسار المتتاليات للشعبة العلمية</h2><p id="homeDescription">دروس وأنشطة وتمارين مرتبة دون خلط بين الشعب.</p></div>
+        </section>
+        <section class="stats-grid">
+          <article><span>الدروس</span><strong id="statLessons">0</strong></article>
+          <article><span>الأنشطة</span><strong id="statActivities">0</strong></article>
+          <article><span>التمارين</span><strong id="statExercises">0</strong></article>
+        </section>
+        <section class="card next-card"><span class="pill">الفعل التالي</span><h2 id="nextLessonTitle">ابدأ الدرس الأول</h2><p id="nextLessonSummary">اختر الشعبة ثم افتح الدرس المناسب.</p><button class="primary-action" type="button" id="continueBtn">ابدأ الآن</button></section>
+      </section>
+
+      <section class="view" id="learnView"><p class="section-note">الدروس حسب الشعبة المختارة</p><div class="lesson-grid" id="moduleGrid"></div></section>
+
+      <section class="view" id="moduleView">
+        <button class="ghost-action" type="button" data-view-target="learn">العودة إلى الدروس</button>
+        <article class="lesson-detail" id="moduleDetail"></article>
+      </section>
+
+      <section class="view" id="practiceView"><p class="section-note">تمارين غير محلولة للتدريب الذاتي</p><div id="practiceList" class="exercise-list"></div></section>
+
+      <section class="view" id="bacView"><p class="section-note">نماذج بكالوريا خاصة بالمتتاليات العددية</p><div class="filter-row"><label>السنة <select id="bacYearFilter"></select></label></div><div id="bacList" class="exercise-list"></div></section>
+
+      <section class="view" id="progressView"><section class="card"><span class="pill">تقدمي</span><h2>لوحة الإنجاز</h2><p id="progressSummary">لم تبدأ بعد.</p><div class="progress-list" id="progressList"></div></section></section>
+
+      <section class="view" id="teacherView">
+        <p class="section-note">إدارة ما يظهر للتلميذ</p>
+        <section class="teacher-grid">
+          <article class="card"><span class="pill">تنقل سريع</span><h2>صفحات التلميذ</h2><button class="primary-action" type="button" data-view-target="home">واجهة التلميذ</button></article>
+          <article class="card"><span class="pill">المسار المعروض</span><h2>اختيار الشعبة</h2><p>غيّر الشعبة من الأزرار العلوية دون خلط محتوى الدروس.</p></article>
+          <article class="card"><span class="pill">إجراء</span><h2>تقدم التلميذ</h2><button class="danger-action" type="button" id="resetProgressBtn">تصفير التقدم</button></article>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
