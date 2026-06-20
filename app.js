@@ -800,7 +800,7 @@ const bacExercises = [
     branch: "science",
     stream: "experimental",
     year: "2017",
-    title: "بكالوريا 2017 - الموضوع الأول - علوم تجريبية",
+    title: "بكالوريا 2017 - الدورة الاستثنائية - الموضوع الأول - علوم تجريبية",
     statementHtml: `<div class="bac-statement">
       <p>نعتبر المتتاليتين <span class="math">(uₙ)</span> و <span class="math">(vₙ)</span> المعرفتين على مجموعة الأعداد الطبيعية <span class="math">N</span> كما يلي:</p>
       <p class="math">u₀=1 ، uₙ₊₁=(3/4)uₙ+1</p>
@@ -817,6 +817,125 @@ const bacExercises = [
     </div>`,
     solution: "نحسب u₁=(3/4)·1+1=7/4، و v₁=(3/4)·6+1=11/2. كما أن uₙ₊₂-uₙ₊₁=[(3/4)uₙ₊₁+1]-[(3/4)uₙ+1]=(3/4)(uₙ₊₁-uₙ). بما أن u₁-u₀=3/4>0، فإن كل الفروق التالية موجبة، إذن (uₙ) متزايدة تماما. وبما أن v₁-v₀=-1/2<0، فإن كل الفروق التالية سالبة، إذن (vₙ) متناقصة تماما. نضع wₙ=uₙ-vₙ، فنجد wₙ₊₁=(3/4)(uₙ-vₙ)=(3/4)wₙ، إذن (wₙ) هندسية أساسها q=3/4 وحدها الأول w₀=1-6=-5، ومنه wₙ=-5(3/4)ⁿ. بما أن wₙ<0 فإن uₙ<vₙ، وبما أن wₙ يؤول إلى 0 فإن vₙ-uₙ يؤول إلى 0، ومع تزايد (uₙ) وتناقص (vₙ) نستنتج أن المتتاليتين متجاورتان."
   },  {
+    id: "bac-2017-exp-subject-2",
+    branch: "science",
+    stream: "experimental",
+    year: "2017",
+    title: "بكالوريا 2017 - الدورة الاستثنائية - الموضوع الثاني - علوم تجريبية",
+    figureHtml: `<figure class="bac-figure" aria-label="تمثيل بياني للمنحنى Cf والمستقيم Delta">
+      <svg class="bac-graph" viewBox="0 0 420 300" role="img">
+        <rect x="0" y="0" width="420" height="300" rx="10" class="graph-bg"></rect>
+        <g class="grid-lines"><path d="M80 30V250 M140 30V250 M200 30V250 M260 30V250 M320 30V250 M380 30V250 M40 70H390 M40 120H390 M40 170H390 M40 220H390"></path></g>
+        <g class="axes"><path d="M40 250H395"></path><path d="M80 265V25"></path></g>
+        <g class="axis-labels"><text x="74" y="269">0</text><text x="134" y="269">1</text><text x="194" y="269">2</text><text x="254" y="269">3</text><text x="314" y="269">4</text><text x="374" y="269">5</text><text x="57" y="224">1</text><text x="57" y="174">2</text><text x="57" y="124">3</text></g>
+        <path class="line-delta" d="M80 250L320 50"></path>
+        <path class="curve-f" d="M80 220 C110 190 135 166 160 150 C205 122 270 106 380 96"></path>
+        <text x="255" y="78" class="graph-label">(Δ)</text>
+        <text x="315" y="103" class="graph-label">(Cf)</text>
+      </svg>
+    </figure>`,
+    statementHtml: `<div class="bac-statement">
+      <p>في معلم متعامد ومتجانس، والمستقيم <span class="math">(Δ)</span> معادلته <span class="math">y=x</span>. لتكن الدالة <span class="math">f</span> ممثلة بالمنحنى <span class="math">(Cf)</span>.</p>
+      <p>ليكن <span class="math">α</span> عددا حقيقيا موجبا. المتتالية العددية <span class="math">(uₙ)</span> معرفة على <span class="math">N</span> بحدها الأول <span class="math">u₀=α</span>، ومن أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math">uₙ₊₁=f(uₙ)</p>
+      <p><strong>I.</strong> عين قيمة <span class="math">α</span> حتى تكون <span class="math">(uₙ)</span> متتالية ثابتة.</p>
+      <p><strong>II.</strong> نضع في كل ما يلي <span class="math">α=5</span>.</p>
+      <ol>
+        <li>انقل الشكل المقابل، ثم مثل على حامل محور الفواصل الحدود <span class="math">u₀، u₁، u₂، u₃</span> دون حسابها، مبرزا خطوط التمثيل.</li>
+        <li>ضع تخمينا حول اتجاه تغير المتتالية <span class="math">(uₙ)</span> وتقاربها.</li>
+      </ol>
+      <p><strong>2.</strong> نعتبر المتتالية <span class="math">(vₙ)</span> المعرفة على <span class="math">N</span> بـ:</p>
+      <p class="math">vₙ=(uₙ-1)/(uₙ+1)</p>
+      <ol>
+        <li>برهن أن <span class="math">(vₙ)</span> هندسية أساسها <span class="math">1/2</span>، ثم عين حدها الأول.</li>
+        <li>عبر عن <span class="math">vₙ</span> و <span class="math">uₙ</span> بدلالة <span class="math">n</span>، ثم احسب <span class="math">lim uₙ</span>.</li>
+      </ol>
+      <p><strong>3.</strong> احسب بدلالة <span class="math">n</span> المجموع:</p>
+      <p class="math">Sₙ=vₙ+vₙ₊₁+...+vₙ₊₂₀₁₆</p>
+      <p>ثم استنتج بدلالة <span class="math">n</span> المجموع:</p>
+      <p class="math">S'ₙ=1/(uₙ+1)+1/(uₙ₊₁+1)+...+1/(uₙ₊₂₀₁₆+1)</p>
+    </div>`,
+    solution: "القيمة التي تجعل المتتالية ثابتة هي حل f(α)=α، ومن الرسم نقطة تقاطع (Cf) مع y=x هي α=1. عند α=5 توحي القراءة البيانية أن (uₙ) متناقصة وتتقارب نحو 1. بما أن vₙ=(uₙ-1)/(uₙ+1)، والتمرين يقود إلى vₙ₊₁=(1/2)vₙ، فإن (vₙ) هندسية أساسها 1/2. لدينا v₀=(5-1)/(5+1)=2/3، ومنه vₙ=(2/3)(1/2)ⁿ. ومن العلاقة vₙ=(uₙ-1)/(uₙ+1) نستنتج uₙ=(1+vₙ)/(1-vₙ)، وبالتالي lim uₙ=1. كما أن Sₙ=vₙ(1-(1/2)²⁰¹⁷)/(1-1/2)=2vₙ(1-(1/2)²⁰¹⁷). وبما أن 1/(uₖ+1)=(1-vₖ)/2، فإن S'ₙ=2017/2 - Sₙ/2."
+  },  {
+    id: "bac-2017-exp-regular-subject-1",
+    branch: "science",
+    stream: "experimental",
+    year: "2017",
+    title: "بكالوريا 2017 - الموضوع الأول - علوم تجريبية",
+    statementHtml: `<div class="bac-statement">
+      <p>متتاليتان <span class="math">(uₙ)</span> و <span class="math">(vₙ)</span> معرفتان على مجموعة الأعداد الطبيعية <span class="math">N</span> كما يلي:</p>
+      <p class="math">u₀=1/4 ، uₙ₊₁=3-10/(uₙ+4)</p>
+      <p class="math">vₙ=(uₙ+2)/(1-uₙ)</p>
+      <ol>
+        <li>برهن بالتراجع أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">0&lt;uₙ&lt;1</span>.</li>
+        <li>بين أن المتتالية <span class="math">(uₙ)</span> متزايدة تماما، ثم استنتج أنها متقاربة.</li>
+      </ol>
+      <p><strong>2.</strong></p>
+      <ol>
+        <li>بين أن المتتالية <span class="math">(vₙ)</span> هندسية أساسها <span class="math">5/2</span>، ثم عبر عن حدها العام <span class="math">vₙ</span> بدلالة <span class="math">n</span>.</li>
+        <li>أثبت أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">uₙ=1-3/(vₙ+1)</span>، ثم استنتج <span class="math">lim uₙ</span>.</li>
+      </ol>
+    </div>`,
+    solution: "نكتب uₙ₊₁=(3uₙ+2)/(uₙ+4). إذا 0<uₙ<1 فإن uₙ₊₁>0، كما أن uₙ₊₁<1 لأن 3uₙ+2<uₙ+4 يكافئ uₙ<1، فتثبت الخاصية بالتراجع. ولدراسة التغير: uₙ₊₁-uₙ=(3uₙ+2)/(uₙ+4)-uₙ=-(uₙ-1)(uₙ+2)/(uₙ+4)>0 لأن 0<uₙ<1، إذن (uₙ) متزايدة ومحدودة من الأعلى بـ1، فهي متقاربة. نحسب vₙ₊₁=(uₙ₊₁+2)/(1-uₙ₊₁)، وبالتعويض بـ uₙ₊₁=(3uₙ+2)/(uₙ+4) نجد vₙ₊₁=(5/2)vₙ. كما أن v₀=(1/4+2)/(1-1/4)=3، إذن vₙ=3(5/2)ⁿ. ومن vₙ=(uₙ+2)/(1-uₙ) نستنتج uₙ=(vₙ-2)/(vₙ+1)=1-3/(vₙ+1). وبما أن vₙ يؤول إلى +∞ فإن lim uₙ=1."
+  },  {
+    id: "bac-2016-exp-subject-1",
+    branch: "science",
+    stream: "experimental",
+    year: "2016",
+    title: "بكالوريا 2016 - الدورة الاستثنائية - الموضوع الأول - علوم تجريبية",
+    statementHtml: `<div class="bac-statement">
+      <p>نعتبر الدالة العددية <span class="math">f</span> المعرفة على المجال <span class="math">I=[0،4]</span> كما يلي:</p>
+      <p class="math">f(x)=13x/(9x+13)</p>
+      <ol>
+        <li>بين أن الدالة <span class="math">f</span> متزايدة تماما على المجال <span class="math">I</span>.</li>
+        <li>بين أنه من أجل كل عدد حقيقي <span class="math">x</span> من المجال <span class="math">I</span>، فإن <span class="math">f(x)</span> ينتمي إلى <span class="math">I</span>.</li>
+      </ol>
+      <p><strong>2.</strong> لتكن المتتالية العددية <span class="math">(uₙ)</span> المعرفة على <span class="math">N</span> بحدها الأول <span class="math">u₀=4</span> و <span class="math">uₙ₊₁=f(uₙ)</span>، من أجل كل عدد طبيعي <span class="math">n</span>.</p>
+      <ol>
+        <li>برهن بالتراجع أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">0≤uₙ≤4</span>.</li>
+        <li>ادرس اتجاه تغير المتتالية <span class="math">(uₙ)</span>، ثم استنتج أنها متقاربة.</li>
+      </ol>
+      <p><strong>3.</strong> بين أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">uₙ≠0</span>.</p>
+      <p><strong>4.</strong> لتكن المتتالية العددية <span class="math">(vₙ)</span> المعرفة على <span class="math">N</span> كما يلي:</p>
+      <p class="math">vₙ=2+13/uₙ</p>
+      <ol>
+        <li>برهن أن المتتالية <span class="math">(vₙ)</span> حسابية، ثم عين أساسها وحدها الأول <span class="math">v₀</span>.</li>
+        <li>اكتب <span class="math">vₙ</span> بدلالة <span class="math">n</span>.</li>
+        <li>استنتج أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">uₙ=52/(36n+13)</span>، ثم احسب <span class="math">lim uₙ</span>.</li>
+      </ol>
+    </div>`,
+    solution: "لدينا f'(x)=169/(9x+13)²>0، إذن f متزايدة تماما على I. كما أن f(0)=0 و f(4)=52/49، وبما أن f متزايدة فإن f(I)=[0،52/49]⊂[0،4]. بالتراجع: u₀∈I، وإذا uₙ∈I فإن uₙ₊₁=f(uₙ)∈I، ومنه 0≤uₙ≤4. كما أن f(x)-x=13x/(9x+13)-x=-9x(x+4/9)/(9x+13)≤0، وبالتالي (uₙ) متناقصة ومحدودة من الأسفل بـ0، فهي متقاربة. وبما أن u₀>0 و f(x)>0 لكل x>0، فإن uₙ≠0. نحسب vₙ₊₁=2+13/uₙ₊₁=2+13(9uₙ+13)/(13uₙ)=11+13/uₙ=vₙ+9، إذن (vₙ) حسابية أساسها 9 وحدها الأول v₀=2+13/4=21/4. ومنه vₙ=21/4+9n=(36n+21)/4. بما أن vₙ=2+13/uₙ، فإن 13/uₙ=vₙ-2=(36n+13)/4، وبالتالي uₙ=52/(36n+13)، ومنه lim uₙ=0."
+  },  {
+    id: "bac-2016-exp-subject-2",
+    branch: "science",
+    stream: "experimental",
+    year: "2016",
+    title: "بكالوريا 2016 - الدورة الاستثنائية - الموضوع الثاني - علوم تجريبية",
+    statementHtml: `<div class="bac-statement">
+      <p>المتتالية العددية <span class="math">(uₙ)</span> معرفة على <span class="math">N</span> بحدها الأول <span class="math">u₀=0</span>، ومن أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math">uₙ₊₁=(2uₙ+2)/(uₙ+3)</p>
+      <p>ولتكن المتتالية <span class="math">(vₙ)</span> المعرفة من أجل كل عدد طبيعي <span class="math">n</span> بـ:</p>
+      <p class="math">vₙ=(uₙ-1)/(uₙ+2)</p>
+      <ol>
+        <li>بين أن المتتالية <span class="math">(vₙ)</span> هندسية، ثم عين أساسها <span class="math">q</span> وحدها الأول <span class="math">v₀</span>.</li>
+        <li>عبر بدلالة <span class="math">n</span> عن عبارة الحد العام <span class="math">vₙ</span>.</li>
+        <li>استنتج عبارة الحد العام <span class="math">uₙ</span> بدلالة <span class="math">n</span>.</li>
+        <li>احسب <span class="math">lim uₙ</span>.</li>
+      </ol>
+      <p><strong>3.</strong></p>
+      <ol>
+        <li>احسب بدلالة <span class="math">n</span> المجموع: <span class="math">Sₙ=v₀+v₁+...+vₙ</span>.</li>
+        <li>تحقق أنه من أجل كل عدد طبيعي <span class="math">n</span>:</li>
+      </ol>
+      <p class="math">1/(uₙ+2)=1/3(1-vₙ)</p>
+      <ol start="3">
+        <li>استنتج بدلالة <span class="math">n</span> المجموع:</li>
+      </ol>
+      <p class="math">S'ₙ=1/(u₀+2)+1/(u₁+2)+...+1/(uₙ+2)</p>
+    </div>`,
+    solution: "نحسب vₙ₊₁=(uₙ₊₁-1)/(uₙ₊₁+2). بالتعويض uₙ₊₁=(2uₙ+2)/(uₙ+3) نجد vₙ₊₁=((uₙ-1)/(uₙ+3))/(4(uₙ+2)/(uₙ+3))=(1/4)(uₙ-1)/(uₙ+2)=(1/4)vₙ. إذن (vₙ) هندسية أساسها q=1/4، وحدها الأول v₀=(0-1)/(0+2)=-1/2. لذلك vₙ=-(1/2)(1/4)ⁿ. ومن vₙ=(uₙ-1)/(uₙ+2) نحصل على uₙ=(1+2vₙ)/(1-vₙ)، ومنه lim uₙ=1. كما أن Sₙ=v₀(1-qⁿ⁺¹)/(1-q)=(-1/2)(1-(1/4)ⁿ⁺¹)/(3/4)=-2/3(1-(1/4)ⁿ⁺¹). وبما أن 1/(uₙ+2)=1/3(1-vₙ)، فإن S'ₙ=1/3[(n+1)-Sₙ]=1/3[n+1+2/3(1-(1/4)ⁿ⁺¹)]."
+  },
+  {
     id: "bac-model-math",
     branch: "science",
     stream: "mathematics",
