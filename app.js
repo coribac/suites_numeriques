@@ -179,8 +179,8 @@ const bacExercises = [
     id: "bac-2008-exp-subject-1",
     branch: "science",
     stream: "experimental",
-    year: "2008",
-    title: "بكالوريا 2008 - علوم تجريبية - الموضوع الأول: المتتاليات العددية",
+    year: "2025",
+    title: "بكالوريا 2025 - علوم تجريبية - الموضوع الأول: المتتاليات العددية",
     figureHtml: `<figure class="bac-figure" aria-label="تمثيل بياني للدالة f والمستقيم y=x">
       <svg class="bac-graph" viewBox="0 0 420 300" role="img">
         <rect x="0" y="0" width="420" height="300" rx="10" class="graph-bg"></rect>
@@ -251,7 +251,7 @@ const bacExercises = [
     branch: "science",
     stream: "experimental",
     year: "2008",
-    title: "بكالوريا 2008 - الموضوع الثاني - علوم تجريبية",
+    title: "بكالوريا 2008 - علوم تجريبية - الموضوع الثاني",
     statementHtml: `<div class="bac-statement">
       <p><strong>1.</strong> ادرس اتجاه تغير الدالة <span class="math">f</span> المعرفة على <span class="math">[0، +∞[</span> بـ <span class="math">f(x)=5x/(2x+1)</span>.</p>
       <p><strong>2.</strong> نعرف المتتالية <span class="math">(uₙ)</span> كما يلي: <span class="math">u₀=3</span> و <span class="math">uₙ₊₁=f(uₙ)</span>.</p>
@@ -270,6 +270,107 @@ const bacExercises = [
       <p>استنتج بدلالة <span class="math">n</span> حساب المجموع <span class="math">Tₙ=6/u₀+6/u₁+...+6/uₙ</span>.</p>
     </div>`,
     solution: "f'(x)=5/(2x+1)²>0 إذن f متزايدة على [0,+∞[. u₁=15/7 و u₂=75/37. بالتراجع: إذا 2<uₙ≤3 فإن f(2)=2 و f(3)=15/7≤3، وبما أن f متزايدة نحصل على 2<uₙ₊₁≤15/7≤3. كما أن uₙ₊₁-uₙ=5uₙ/(2uₙ+1)-uₙ=2uₙ(2-uₙ)/(2uₙ+1)<0، إذن (uₙ) متناقصة ومحدودة من الأسفل بـ2. لدينا v₀=1/3، وبالحساب vₙ₊₁=(3/5)vₙ، ومنه vₙ=(1/3)(3/5)ⁿ. بما أن 1-2/uₙ=vₙ/3ⁿ=1/(3·5ⁿ)، فإن 2/uₙ=1-1/(3·5ⁿ)، وبالتالي uₙ=6·5ⁿ/(3·5ⁿ-1)، ومنه lim uₙ=2. كما أن 6/uₙ=3-1/5ⁿ، وبالتالي Tₙ=Σ(3-1/5ᵏ)=3(n+1)-5/4(1-1/5ⁿ⁺¹)."
+  },
+  {
+    id: "bac-2024-exp-subject-1",
+    branch: "science",
+    stream: "experimental",
+    year: "2024",
+    title: "بكالوريا 2024 - علوم تجريبية - الموضوع الأول: المتتاليات العددية",
+    statementHtml: `<div class="bac-statement">
+      <p>المتتالية العددية <span class="math">(u<sub>n</sub>)</span> المعرفة بـ <span class="math">u<sub>0</sub> = 0</span> ومن أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math-equation">u<sub>n+1</sub> = (4 - u<sub>n</sub>)/(2 + u<sub>n</sub>)</p>
+
+      <h4>1) حساب حدود وبرهان بالتراجع</h4>
+      <p>احسب الحدود <span class="math">u<sub>1</sub>، u<sub>2</sub>، u<sub>3</sub></span>، ثم برهن بالتراجع أنه من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math-equation">0 ≤ u<sub>n</sub> ≤ 2</p>
+
+      <h4>2) دراسة المتتالية <span class="math">(v<sub>n</sub>)</span></h4>
+      <p>المتتالية العددية <span class="math">(v<sub>n</sub>)</span> المعرفة على <span class="math">ℕ</span> بـ:</p>
+      <p class="math-equation">v<sub>n</sub> = (u<sub>n</sub> - 1)/(u<sub>n</sub> + 4)</p>
+      <ol>
+        <li><strong>أ)</strong> أثبت أن المتتالية <span class="math">(v<sub>n</sub>)</span> هندسية أساسها <span class="math">-2/3</span>، ثم اكتب عبارة <span class="math">v<sub>n</sub></span> بدلالة <span class="math">n</span>.</li>
+        <li><strong>ب)</strong> بيّن أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">u<sub>n</sub> = 5/(1 - v<sub>n</sub>) - 4</span>، ثم احسب <span class="math">lim<sub>n→+∞</sub> u<sub>n</sub></span>.</li>
+      </ol>
+
+      <h4>3) حساب مجموعتين</h4>
+      <p>من أجل كل عدد طبيعي <span class="math">n</span>، نضع:</p>
+      <p class="math-equation">S<sub>n</sub> = v<sub>n</sub> + v<sub>n+1</sub> + ... + v<sub>n+2024</sub></p>
+      <p class="math-equation">T<sub>n</sub> = 1/(4 + u<sub>n</sub>) + 1/(4 + u<sub>n+1</sub>) + ... + 1/(4 + u<sub>n+2024</sub>)</p>
+      <p>احسب <span class="math">S<sub>n</sub></span> بدلالة <span class="math">n</span>، ثم استنتج <span class="math">T<sub>n</sub></span> بدلالة <span class="math">n</span>.</p>
+    </div>`,
+    solution: `<p><strong>1)</strong> بالتعويض المباشر:</p>
+      <p class="math-equation">u<sub>1</sub> = 2، u<sub>2</sub> = 1/2، u<sub>3</sub> = 7/5</p>
+      <p><strong>برهان بالتراجع:</strong> عند <span class="math">n = 0</span>، لدينا <span class="math">u<sub>0</sub> = 0</span>، إذن <span class="math">0 ≤ u<sub>0</sub> ≤ 2</span>.</p>
+      <p>نفترض أن <span class="math">0 ≤ u<sub>n</sub> ≤ 2</span>، ونريد إثبات أن <span class="math">0 ≤ u<sub>n+1</sub> ≤ 2</span>.</p>
+      <p>بما أن <span class="math">u<sub>n+1</sub> = (4 - u<sub>n</sub>)/(2 + u<sub>n</sub>)</span>، فإن <span class="math">u<sub>n+1</sub> ≥ 0</span> بما أن البسط والمقام موجبان.</p>
+      <p>كما أن <span class="math">u<sub>n+1</sub> - 2 = (4 - u<sub>n</sub> - 4 - 2u<sub>n</sub>)/(2 + u<sub>n</sub>) = -3u<sub>n</sub>/(2 + u<sub>n</sub>) ≤ 0</span>.</p>
+      <p>إذن <span class="math">u<sub>n+1</sub> ≤ 2</span>. وبالتالي العبارة صحيحة لكل <span class="math">n</span>.</p>
+      <p><strong>2)</strong> <strong>أ)</strong> لدينا <span class="math">v<sub>0</sub> = (0 - 1)/(0 + 4) = -1/4</span>.</p>
+      <p>وباستعمال العلاقة التراجعية لـ <span class="math">u<sub>n</sub></span> نجد:</p>
+      <p class="math-equation">v<sub>n+1</sub> = -2/3 × v<sub>n</sub></p>
+      <p>إذن <span class="math">(v<sub>n</sub>)</span> متتالية هندسية أساسها <span class="math">-2/3</span> وحدها الأول <span class="math">-1/4</span>، وبالتالي:</p>
+      <p class="math-equation">v<sub>n</sub> = -1/4 × (-2/3)<sup>n</sup></p>
+      <p><strong>ب)</strong> من <span class="math">v<sub>n</sub> = (u<sub>n</sub> - 1)/(u<sub>n</sub> + 4)</span>، نجد <span class="math">v<sub>n</sub>(u<sub>n</sub> + 4) = u<sub>n</sub> - 1</span>، ثم <span class="math">u<sub>n</sub>(1 - v<sub>n</sub>) = 1 + 4v<sub>n</sub></span>.</p>
+      <p>وبما أن <span class="math">1 + 4v<sub>n</sub> = 5(1 - v<sub>n</sub>)</span> (باستعمال عبارة <span class="math">v<sub>n</sub></span>)، فإن:</p>
+      <p class="math-equation">u<sub>n</sub> = 5/(1 - v<sub>n</sub>) - 4</p>
+      <p>وبما أن <span class="math">(-2/3)<sup>n</sup></span> يؤول إلى 0، فإن <span class="math">v<sub>n</sub></span> يؤول إلى 0، ومنه:</p>
+      <p class="math-equation">lim<sub>n→+∞</sub> u<sub>n</sub> = 1</p>
+      <p><strong>3)</strong> <span class="math">S<sub>n</sub></span> مجموع 2025 حد متتالية هندسية أساسها <span class="math">-2/3</span>:</p>
+      <p class="math-equation">S<sub>n</sub> = v<sub>n</sub> × [1 - (-2/3)<sup>2025</sup>]/[1 + 2/3] = -3/20 × (-2/3)<sup>n</sup> × [1 - (-2/3)<sup>2025</sup>]</p>
+      <p>لاحظ أن <span class="math">1/(4 + u<sub>k</sub>) = (1 - v<sub>k</sub>)/5</span>، إذن:</p>
+      <p class="math-equation">T<sub>n</sub> = 405 - S<sub>n</sub>/5</p>
+      <p>وبالتعويض عن <span class="math">S<sub>n</sub></span>:</p>
+      <p class="math-equation">T<sub>n</sub> = 405 + 3/100 × (-2/3)<sup>n</sup> × [1 - (-2/3)<sup>2025</sup>]</p>`
+  },
+  {
+    id: "bac-2024-exp-subject-2",
+    branch: "science",
+    stream: "experimental",
+    year: "2024",
+    title: "بكالوريا 2024 - الموضوع الثاني - علوم تجريبية",
+    statementHtml: `<div class="bac-statement">
+      <p><strong>1.</strong> لتكن الدالة العددية <span class="math">f</span> المعرفة على المجال <span class="math">[2، +∞[</span> كما يلي:</p>
+      <p class="math">f(x)=(x+1)/(2x)</p>
+      <ol>
+        <li>شكل جدول تغيرات الدالة <span class="math">f</span>.</li>
+        <li>استنتج أنه من أجل كل <span class="math">x</span> من <span class="math">[2، +∞[</span> فإن: <span class="math">1/2 &lt; f(x) ≤ 3/4</span>.</li>
+      </ol>
+      <p><strong>2.</strong> نعرف المتتالية العددية <span class="math">(uₙ)</span> من أجل كل عدد طبيعي <span class="math">n≥2</span> بـ:</p>
+      <p class="math">uₙ=n/2ⁿ</p>
+      <ol>
+        <li>بين أنه من أجل كل <span class="math">n≥2</span>: <span class="math">uₙ₊₁/uₙ ≤ 3/4</span>.</li>
+        <li>أثبت أنه من أجل كل <span class="math">n≥2</span>: <span class="math">uₙ ≤ (1/2)(3/4)ⁿ⁻²</span>، ثم استنتج <span class="math">lim uₙ</span>.</li>
+        <li>نضع من أجل كل <span class="math">n≥2</span>: <span class="math">Sₙ=u₂/2+u₃/3+...+uₙ/n</span>.</li>
+        <li>بين أن <span class="math">Sₙ=1/2(1-(1/2)ⁿ⁻¹)</span>، ثم عين العدد الطبيعي <span class="math">n</span> حتى يكون <span class="math">Sₙ=511/1024</span>.</li>
+      </ol>
+    </div>`,
+    solution: "لدينا f(x)=(x+1)/(2x)=1/2+1/(2x)، ومنه f'(x)=-1/(2x²)<0 على [2,+∞[، إذن f متناقصة. كما أن f(2)=3/4 و lim f(x)=1/2، لذلك 1/2<f(x)≤3/4. وبما أن uₙ=n/2ⁿ فإن uₙ₊₁/uₙ=((n+1)/2ⁿ⁺¹)/(n/2ⁿ)=(n+1)/(2n)=f(n)، ومنه uₙ₊₁/uₙ≤3/4 لكل n≥2. بالتكرار: uₙ≤u₂(3/4)ⁿ⁻²، و u₂=1/2، إذن uₙ≤(1/2)(3/4)ⁿ⁻²، ومنه lim uₙ=0. كما أن uₖ/k=1/2ᵏ، لذلك Sₙ=1/2²+1/2³+...+1/2ⁿ=1/2(1-(1/2)ⁿ⁻¹). إذا Sₙ=511/1024 فإن 1/2(1-1/2ⁿ⁻¹)=511/1024، فنجد 1/2ⁿ=1/1024=1/2¹⁰، وبالتالي n=10."
+  },  {
+    id: "bac-2023-exp-subject-1",
+    branch: "science",
+    stream: "experimental",
+    year: "2023",
+    title: "بكالوريا 2023 - الموضوع الأول - علوم تجريبية",
+    statementHtml: `<div class="bac-statement">
+      <p>لتكن المتتالية <span class="math">(uₙ)</span> المعرفة بـ:</p>
+      <p class="math">u₀=1/2 ، uₙ₊₁=-1+2/(2-uₙ)</p>
+      <ol>
+        <li>برهن بالتراجع أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">0&lt;uₙ≤1/2</span>.</li>
+        <li>بين أن المتتالية <span class="math">(uₙ)</span> متناقصة تماما.</li>
+      </ol>
+      <p><strong>2.</strong> نضع من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math">vₙ=1/uₙ - 1</p>
+      <ol>
+        <li>أثبت أن المتتالية <span class="math">(vₙ)</span> هندسية أساسها <span class="math">2</span>، ثم اكتب عبارة <span class="math">vₙ</span> بدلالة <span class="math">n</span>.</li>
+        <li>استنتج أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">uₙ=1/(2ⁿ+1)</span>، ثم احسب <span class="math">lim uₙ</span>.</li>
+      </ol>
+      <p><strong>3.</strong> نضع من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math">Sₙ=v₀+v₁+...+vₙ ، Tₙ=1/u₀+1/u₁+...+1/uₙ</p>
+      <p>احسب <span class="math">Sₙ</span> بدلالة <span class="math">n</span>، ثم بين أنه من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math">Tₙ=2ⁿ⁺¹+n</p>
+    </div>`,
+    solution: "نكتب uₙ₊₁=-1+2/(2-uₙ)=uₙ/(2-uₙ). إذا 0<uₙ≤1/2 فإن 3/2≤2-uₙ<2، ومنه uₙ₊₁>0 و uₙ₊₁≤(1/2)/(3/2)=1/3≤1/2، فتثبت الخاصية بالتراجع. كما أن uₙ₊₁-uₙ=uₙ/(2-uₙ)-uₙ=uₙ(uₙ-1)/(2-uₙ)<0، إذن (uₙ) متناقصة تماما. لدينا vₙ₊₁=1/uₙ₊₁-1=(2-uₙ)/uₙ-1=2/uₙ-2=2(1/uₙ-1)=2vₙ، و v₀=1، إذن vₙ=2ⁿ. ومنه 1/uₙ=vₙ+1=2ⁿ+1، أي uₙ=1/(2ⁿ+1)، وبالتالي lim uₙ=0. كما أن Sₙ=1+2+...+2ⁿ=2ⁿ⁺¹-1. وبما أن 1/uₖ=vₖ+1، فإن Tₙ=Sₙ+(n+1)=2ⁿ⁺¹+n."
   },  {
     id: "bac-model-math",
     branch: "science",
