@@ -1,12 +1,21 @@
-﻿const STORAGE_KEY = "ayla-sequences-progress-v1";
+const STORAGE_KEY = "ayla-sequences-progress-v1";
 
 const state = {
   view: "home",
   branch: "science",
+  bacStream: "mathematics",
   moduleId: "definition",
   moduleTab: "lesson",
   openSolutions: {},
   progress: loadProgress(),
+};
+
+const scientificStreams = ["mathematics", "technical_math", "experimental"];
+
+const scientificStreamLabels = {
+  mathematics: "رياضيات",
+  technical_math: "تقني رياضي",
+  experimental: "علوم تجريبية",
 };
 
 const branchLabels = {
@@ -167,10 +176,29 @@ const modules = [
 
 const bacExercises = [
   {
-    id: "bac-model-1",
+    id: "bac-model-math",
     branch: "science",
+    stream: "mathematics",
     year: "نموذج",
-    title: "تمرين بكالوريا نموذجي - علمي",
+    title: "تمرين بكالوريا نموذجي - رياضيات",
+    statement: "لتكن المتتالية u معرفة بـ u₀=1 و uₙ₊₁=2uₙ+3. نضع vₙ=uₙ+3. بين أن v هندسية ثم استنتج عبارة uₙ بدلالة n.",
+    solution: "vₙ₊₁=uₙ₊₁+3=2uₙ+6=2(uₙ+3)=2vₙ، إذن v هندسية أساسها 2 و v₀=4. ومنه vₙ=4×2ⁿ، وبالتالي uₙ=4×2ⁿ-3."
+  },
+  {
+    id: "bac-model-technical-math",
+    branch: "science",
+    stream: "technical_math",
+    year: "نموذج",
+    title: "تمرين بكالوريا نموذجي - تقني رياضي",
+    statement: "لتكن المتتالية u معرفة بـ u₀=1 و uₙ₊₁=2uₙ+3. نضع vₙ=uₙ+3. بين أن v هندسية ثم استنتج عبارة uₙ بدلالة n.",
+    solution: "vₙ₊₁=uₙ₊₁+3=2uₙ+6=2(uₙ+3)=2vₙ، إذن v هندسية أساسها 2 و v₀=4. ومنه vₙ=4×2ⁿ، وبالتالي uₙ=4×2ⁿ-3."
+  },
+  {
+    id: "bac-model-experimental",
+    branch: "science",
+    stream: "experimental",
+    year: "نموذج",
+    title: "تمرين بكالوريا نموذجي - علوم تجريبية",
     statement: "لتكن المتتالية u معرفة بـ u₀=1 و uₙ₊₁=2uₙ+3. نضع vₙ=uₙ+3. بين أن v هندسية ثم استنتج عبارة uₙ بدلالة n.",
     solution: "vₙ₊₁=uₙ₊₁+3=2uₙ+6=2(uₙ+3)=2vₙ، إذن v هندسية أساسها 2 و v₀=4. ومنه vₙ=4×2ⁿ، وبالتالي uₙ=4×2ⁿ-3."
   },
@@ -196,7 +224,9 @@ function loadProgress() {
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; }
 }
 function saveProgress() { localStorage.setItem(STORAGE_KEY, JSON.stringify(state.progress)); }
-function activeModules() { return modules.filter((m) => m.branches.includes(state.branch)).sort((a,b) => a.order - b.order); }
+const validBranches = ["science", "literary", "management"];
+function normalizeBranch() { if (!validBranches.includes(state.branch)) state.branch = "science"; }
+function activeModules() { normalizeBranch(); return modules.filter((m) => m.branches.includes(state.branch)).sort((a,b) => a.order - b.order); }
 function currentModule() { return modules.find((m) => m.id === state.moduleId) || activeModules()[0]; }
 function isDone(id) { return Boolean(state.progress[id]); }
 function markComplete(id) { state.progress[id] = true; saveProgress(); renderAll(); }
@@ -259,12 +289,29 @@ function renderPractice() {
 }
 
 function renderBac() {
+  const branchSelect = document.getElementById("bacBranchFilter");
   const select = document.getElementById("bacYearFilter");
   const list = document.getElementById("bacList");
   if (!select || !list) return;
-  const branchItems = bacExercises.filter((e) => e.branch === state.branch);
+  if (branchSelect) {
+    if (state.branch === "science") {
+      branchSelect.disabled = false;
+      branchSelect.innerHTML = scientificStreams.map((stream) => `<option value="${stream}">${scientificStreamLabels[stream]}</option>`).join("");
+      branchSelect.value = state.bacStream;
+    } else {
+      branchSelect.disabled = true;
+      branchSelect.innerHTML = `<option value="${state.branch}">${branchLabels[state.branch]}</option>`;
+      branchSelect.value = state.branch;
+    }
+  }
+  const branchItems = bacExercises.filter((e) => {
+    if (state.branch === "science") return e.branch === "science" && e.stream === state.bacStream;
+    return e.branch === state.branch;
+  });
   const years = ["الكل", ...new Set(branchItems.map((e) => e.year))];
-  if (!select.value) select.innerHTML = years.map((y) => `<option value="${y}">${y}</option>`).join("");
+  const chosenBeforeRender = select.value || "الكل";
+  select.innerHTML = years.map((y) => `<option value="${y}">${y}</option>`).join("");
+  select.value = years.includes(chosenBeforeRender) ? chosenBeforeRender : "الكل";
   const chosen = select.value || "الكل";
   const visible = chosen === "الكل" ? branchItems : branchItems.filter((e) => e.year === chosen);
   list.innerHTML = visible.length ? visible.map((ex) => renderExerciseCard(ex, `bac-${ex.id}`)).join("") : `<section class="card"><p>لا توجد نماذج لهذه الشعبة بعد.</p></section>`;
@@ -330,6 +377,7 @@ document.getElementById("resetProgressBtn")?.addEventListener("click", () => {
   renderAll();
 });
 
+document.getElementById("bacBranchFilter")?.addEventListener("change", (event) => { state.bacStream = event.target.value; renderBac(); });
 document.getElementById("bacYearFilter")?.addEventListener("change", renderBac);
 
 renderAll();

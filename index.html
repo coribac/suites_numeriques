@@ -1,15 +1,16 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-store">
   <title>المتتاليات العددية - تطبيق مستقل</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260620-branch-filter">
 </head>
 <body>
   <div class="app-shell">
     <aside class="side-nav" aria-label="التنقل الرئيسي">
-      <div class="brand"><span>Un</span><div><strong>المتتاليات العددية</strong><small>نهائي علمي وأدبي وتسيير</small></div></div>
+      <div class="brand"><span>Un</span><div><strong>المتتاليات العددية</strong><small>نهائي حسب الشعبة</small></div></div>
       <button class="nav-btn active" type="button" data-view="home"><span>الرئيسية</span><small>نظرة عامة</small></button>
       <button class="nav-btn" type="button" data-view="learn"><span>التعلم</span><small>الدروس والأنشطة</small></button>
       <button class="nav-btn" type="button" data-view="practice"><span>التمارين</span><small>تدريب مباشر</small></button>
@@ -54,7 +55,7 @@
 
       <section class="view" id="practiceView"><p class="section-note">تمارين غير محلولة للتدريب الذاتي</p><div id="practiceList" class="exercise-list"></div></section>
 
-      <section class="view" id="bacView"><p class="section-note">نماذج بكالوريا خاصة بالمتتاليات العددية</p><div class="filter-row"><label>السنة <select id="bacYearFilter"></select></label></div><div id="bacList" class="exercise-list"></div></section>
+      <section class="view" id="bacView"><p class="section-note">نماذج بكالوريا خاصة بالمتتاليات العددية</p><div class="filter-row"><label>الشعبة <select id="bacBranchFilter"><option value="mathematics">رياضيات</option><option value="technical_math">تقني رياضي</option><option value="experimental">علوم تجريبية</option></select></label><label>السنة <select id="bacYearFilter"></select></label></div><div id="bacList" class="exercise-list"></div></section>
 
       <section class="view" id="progressView"><section class="card"><span class="pill">تقدمي</span><h2>لوحة الإنجاز</h2><p id="progressSummary">لم تبدأ بعد.</p><div class="progress-list" id="progressList"></div></section></section>
 
@@ -68,6 +69,6 @@
       </section>
     </main>
   </div>
-  <script src="app.js"></script>
+  <script src="app.js?v=20260620-branch-filter"></script>
 </body>
 </html>
