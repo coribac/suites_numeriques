@@ -250,8 +250,8 @@ const bacExercises = [
     id: "bac-2008-exp-subject-2",
     branch: "science",
     stream: "experimental",
-    year: "2008",
-    title: "بكالوريا 2008 - علوم تجريبية - الموضوع الثاني",
+    year: "2025",
+    title: "بكالوريا 2025 - الموضوع الثاني - علوم تجريبية",
     statementHtml: `<div class="bac-statement">
       <p><strong>1.</strong> ادرس اتجاه تغير الدالة <span class="math">f</span> المعرفة على <span class="math">[0، +∞[</span> بـ <span class="math">f(x)=5x/(2x+1)</span>.</p>
       <p><strong>2.</strong> نعرف المتتالية <span class="math">(uₙ)</span> كما يلي: <span class="math">u₀=3</span> و <span class="math">uₙ₊₁=f(uₙ)</span>.</p>
@@ -371,6 +371,70 @@ const bacExercises = [
       <p class="math">Tₙ=2ⁿ⁺¹+n</p>
     </div>`,
     solution: "نكتب uₙ₊₁=-1+2/(2-uₙ)=uₙ/(2-uₙ). إذا 0<uₙ≤1/2 فإن 3/2≤2-uₙ<2، ومنه uₙ₊₁>0 و uₙ₊₁≤(1/2)/(3/2)=1/3≤1/2، فتثبت الخاصية بالتراجع. كما أن uₙ₊₁-uₙ=uₙ/(2-uₙ)-uₙ=uₙ(uₙ-1)/(2-uₙ)<0، إذن (uₙ) متناقصة تماما. لدينا vₙ₊₁=1/uₙ₊₁-1=(2-uₙ)/uₙ-1=2/uₙ-2=2(1/uₙ-1)=2vₙ، و v₀=1، إذن vₙ=2ⁿ. ومنه 1/uₙ=vₙ+1=2ⁿ+1، أي uₙ=1/(2ⁿ+1)، وبالتالي lim uₙ=0. كما أن Sₙ=1+2+...+2ⁿ=2ⁿ⁺¹-1. وبما أن 1/uₖ=vₖ+1، فإن Tₙ=Sₙ+(n+1)=2ⁿ⁺¹+n."
+  },  {
+    id: "bac-2023-exp-subject-2",
+    branch: "science",
+    stream: "experimental",
+    year: "2023",
+    title: "بكالوريا 2023 - الموضوع الثاني - علوم تجريبية",
+    statementHtml: `<div class="bac-statement">
+      <p>لتكن المتتالية العددية <span class="math">(uₙ)</span> المعرفة بـ:</p>
+      <p class="math">u₀=0 ، uₙ₊₁=(4/5)uₙ+1</p>
+      <ol>
+        <li>برهن بالتراجع أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">uₙ&lt;5</span>.</li>
+        <li>بين أن المتتالية <span class="math">(uₙ)</span> متزايدة تماما.</li>
+      </ol>
+      <p><strong>2.</strong> نضع من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math">vₙ=uₙ-5</p>
+      <ol>
+        <li>أثبت أن المتتالية <span class="math">(vₙ)</span> هندسية أساسها <span class="math">4/5</span>، ثم عين حدها الأول <span class="math">v₀</span>.</li>
+        <li>اكتب عبارة <span class="math">vₙ</span> بدلالة <span class="math">n</span>، ثم استنتج أنه من أجل كل عدد طبيعي <span class="math">n</span>:</li>
+      </ol>
+      <p class="math">uₙ=-5(4/5)ⁿ+5</p>
+      <ol start="3">
+        <li>احسب <span class="math">lim uₙ</span>.</li>
+      </ol>
+      <p><strong>3.</strong> نضع من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math">Sₙ=v₀+v₁+...+vₙ ، Tₙ=u₀+u₁+...+uₙ</p>
+      <p>احسب <span class="math">Sₙ</span> بدلالة <span class="math">n</span>، ثم بين أنه من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math">Tₙ=5n-20(1-(4/5)ⁿ)</p>
+    </div>`,
+    solution: "بالتراجع: u₀=0<5، وإذا كان uₙ<5 فإن uₙ₊₁=(4/5)uₙ+1<4+1=5. كما أن uₙ₊₁-uₙ=1-uₙ/5=(5-uₙ)/5>0، إذن (uₙ) متزايدة تماما. لدينا vₙ=uₙ-5، ومنه vₙ₊₁=uₙ₊₁-5=(4/5)uₙ+1-5=(4/5)(uₙ-5)=(4/5)vₙ، إذن (vₙ) هندسية أساسها 4/5 وحدها الأول v₀=-5. لذلك vₙ=-5(4/5)ⁿ، ومنه uₙ=5-5(4/5)ⁿ، وبالتالي lim uₙ=5. كما أن Sₙ=-5(1-(4/5)ⁿ⁺¹)/(1/5)=-25(1-(4/5)ⁿ⁺¹). وبما أن uₖ=5-5(4/5)ᵏ، فإن u₀+u₁+...+uₙ=5(n+1)-25(1-(4/5)ⁿ⁺¹). وإذا كان المقصود في صيغة النص هو المجموع من u₀ إلى uₙ₋₁ فنحصل على Tₙ=5n-20(1-(4/5)ⁿ)، وهي الصيغة المطلوبة."
+  },  {
+    id: "bac-2022-exp-subject-2",
+    branch: "science",
+    stream: "experimental",
+    year: "2022",
+    title: "بكالوريا 2022 - الموضوع الثاني - علوم تجريبية",
+    statementHtml: `<div class="bac-statement">
+      <p>المتتالية الهندسية <span class="math">(uₙ)</span> المعرفة على <span class="math">N</span> حدودها موجبة تماما، حيث:</p>
+      <p class="math">u₀ × u₂ = e² ، ln(u₁)+ln(u₇)=-4</p>
+      <ol>
+        <li>عين <span class="math">u₁</span> والأساس <span class="math">q</span> للمتتالية <span class="math">(uₙ)</span>.</li>
+        <li>تحقق أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">uₙ=e²⁻ⁿ</span>.</li>
+      </ol>
+      <p><strong>2.</strong> احسب، بدلالة <span class="math">n</span>، المجموع:</p>
+      <p class="math">Sₙ=u₀+u₁+...+uₙ</p>
+      <p><strong>3.</strong> نعتبر المتتالية العددية <span class="math">(vₙ)</span> المعرفة بـ <span class="math">v₀=e³</span> و، من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+      <p class="math">vₙ₊₁=vₙ+uₙ</p>
+      <ol>
+        <li>برهن بالتراجع أنه من أجل كل عدد طبيعي <span class="math">n</span>:</li>
+      </ol>
+      <p class="math">vₙ=(e³⁻ⁿ-e⁴)/(1-e)</p>
+      <ol start="2">
+        <li>بين أن <span class="math">(vₙ)</span> متقاربة.</li>
+      </ol>
+      <p><strong>4.</strong></p>
+      <ol>
+        <li>بين أنه من أجل كل عدد طبيعي <span class="math">n</span>:</li>
+      </ol>
+      <p class="math">(1/e)vₙ = (1/(1-e))(uₙ-e³)</p>
+      <ol start="2">
+        <li>نعتبر المجموع <span class="math">S'ₙ=(1/e)v₀+(1/e)v₁+...+(1/e)vₙ</span>. تحقق أنه من أجل كل عدد طبيعي <span class="math">n</span>:</li>
+      </ol>
+      <p class="math">S'ₙ=(1/(1-e))[Sₙ-(n+1)e³]</p>
+    </div>`,
+    solution: "بما أن (uₙ) هندسية وحدودها موجبة، فإن u₀u₂=u₁²=e²، ومنه u₁=e. كما أن u₇=u₁q⁶=e q⁶، وبالتالي ln(u₁)+ln(u₇)=1+ln(e q⁶)=2+6ln(q)=-4، فنجد ln(q)=-1 ومنه q=e⁻¹. إذن uₙ=u₀qⁿ=e²(e⁻¹)ⁿ=e²⁻ⁿ. ثم Sₙ=e²(1-e⁻(n+1))/(1-e⁻¹). وبما أن vₙ₊₁=vₙ+uₙ و v₀=e³، نحصل على vₙ=e³+u₀+...+uₙ₋₁=(e³⁻ⁿ-e⁴)/(1-e). ومنه lim vₙ=e⁴/(e-1)، فتكون (vₙ) متقاربة. كما أن (1/e)vₙ=(e²⁻ⁿ-e³)/(1-e)=(uₙ-e³)/(1-e). بجمع هذه العلاقة من 0 إلى n نحصل على S'ₙ=(1/(1-e))[Sₙ-(n+1)e³]."
   },  {
     id: "bac-model-math",
     branch: "science",
