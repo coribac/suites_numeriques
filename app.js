@@ -176,6 +176,101 @@ const modules = [
 
 const bacExercises = [
   {
+    id: "bac-2008-exp-subject-1",
+    branch: "science",
+    stream: "experimental",
+    year: "2008",
+    title: "بكالوريا 2008 - علوم تجريبية - الموضوع الأول: المتتاليات العددية",
+    figureHtml: `<figure class="bac-figure" aria-label="تمثيل بياني للدالة f والمستقيم y=x">
+      <svg class="bac-graph" viewBox="0 0 420 300" role="img">
+        <rect x="0" y="0" width="420" height="300" rx="10" class="graph-bg"></rect>
+        <g class="grid-lines">
+          <path d="M70 20V260 M140 20V260 M210 20V260 M280 20V260 M350 20V260 M35 60H385 M35 110H385 M35 160H385 M35 210H385 M35 260H385"></path>
+        </g>
+        <g class="axes">
+          <path d="M35 210H390"></path>
+          <path d="M105 270V20"></path>
+        </g>
+        <g class="axis-labels">
+          <text x="98" y="229">0</text><text x="168" y="229">1</text><text x="238" y="229">2</text><text x="308" y="229">3</text><text x="378" y="229">4</text>
+          <text x="82" y="164">1</text><text x="82" y="114">2</text><text x="82" y="64">3</text><text x="47" y="229">-1</text>
+        </g>
+        <path class="line-delta" d="M35 260L385 10"></path>
+        <path class="curve-f" d="M35 35 C70 58 98 86 125 110 C155 136 190 151 230 160 C275 170 325 176 385 181"></path>
+        <g class="graph-points">
+          <circle cx="35" cy="35" r="4"></circle>
+          <circle cx="385" cy="60" r="4"></circle>
+          <circle cx="147" cy="180" r="4"></circle>
+          <circle cx="186" cy="152" r="4"></circle>
+        </g>
+        <text x="260" y="86" class="graph-label">(Δ): y=x</text>
+        <text x="220" y="148" class="graph-label">(Cf)</text>
+        <text x="44" y="28" class="graph-label">u₀=-1</text>
+      </svg>
+    </figure>`,
+    statementHtml: `<div class="bac-statement">
+      <p>لتكن الدالة <span class="math">f</span> المعرفة على المجال <span class="math">[-1 ; +∞[</span> بالعلاقة:</p>
+      <p class="math-equation">f(x) = 3/(x + 2)</p>
+      <p>ونقبل <span class="math">(C<sub>f</sub>)</span> تمثيلها البياني والمستقيم <span class="math">(Δ)</span> معادلته <span class="math">y = x</span>.</p>
+      <p>نُعرّف المتتالية <span class="math">(u<sub>n</sub>)</span> كما يلي:</p>
+      <p><span class="math">u<sub>0</sub> = -1</span> و <span class="math">u<sub>n+1</sub> = f(u<sub>n</sub>)</span></p>
+
+      <h4>1) الدراسة البيانية</h4>
+      <ol>
+        <li>مثّل بيانيا الحدود الأربعة الأولى <span class="math">u<sub>0</sub>، u<sub>1</sub>، u<sub>2</sub>، u<sub>3</sub></span> باستعمال المنحنى <span class="math">(C<sub>f</sub>)</span> والمستقيم <span class="math">(Δ)</span>.</li>
+        <li>أعط تخمينًا حول اتجاه تغيّر المتتالية <span class="math">(u<sub>n</sub>)</span> ونهايتها.</li>
+      </ol>
+
+      <h4>2) دراسة المتتالية <span class="math">(v<sub>n</sub>)</span></h4>
+      <p>نُعرّف المتتالية <span class="math">(v<sub>n</sub>)</span> على <span class="math">ℕ</span> بالعلاقة:</p>
+      <p class="math-equation">v<sub>n</sub> = (1 - u<sub>n</sub>)/(3 + u<sub>n</sub>)</p>
+      <ol>
+        <li>بيّن أن <span class="math">(v<sub>n</sub>)</span> متتالية هندسية أساسها <span class="math">-1/3</span>، ثم اكتب <span class="math">v<sub>n</sub></span> بدلالة <span class="math">n</span>.</li>
+        <li>استنتج كتابة <span class="math">u<sub>n</sub></span> بدلالة <span class="math">n</span>، ثم احسب <span class="math">lim u<sub>n</sub></span>.</li>
+      </ol>
+
+      <h4>3) حساب المجموعتين</h4>
+      <p>احسب بدلالة <span class="math">n</span> كلّا من:</p>
+      <p class="math-equation">S<sub>n</sub> = v<sub>0</sub> + v<sub>1</sub> + ... + v<sub>n</sub></p>
+      <p class="math-equation">T<sub>n</sub> = ln|v<sub>0</sub>| + ln|v<sub>1</sub>| + ... + ln|v<sub>n</sub>|</p>
+    </div>`,
+    solution: `<p><strong>1)</strong> بالحساب: <span class="math">u<sub>0</sub> = -1</span>، <span class="math">u<sub>1</sub> = 3</span>، <span class="math">u<sub>2</sub> = 3/5</span>، <span class="math">u<sub>3</sub> = 15/13</span>. ومن التمثيل البياني تبدو الحدود متقاربة نحو 1.</p>
+      <p><strong>2)</strong> لدينا <span class="math">v<sub>0</sub> = (1 + 1)/(3 - 1) = 1</span>. وباستعمال <span class="math">u<sub>n+1</sub> = 3/(u<sub>n</sub> + 2)</span> نجد <span class="math">v<sub>n+1</sub> = -1/3 × v<sub>n</sub></span>.</p>
+      <p>إذن <span class="math">(v<sub>n</sub>)</span> متتالية هندسية أساسها <span class="math">-1/3</span> وحدها الأول 1، وبالتالي:</p>
+      <p class="math-equation">v<sub>n</sub> = (-1/3)<sup>n</sup></p>
+      <p>من <span class="math">v<sub>n</sub> = (1 - u<sub>n</sub>)/(3 + u<sub>n</sub>)</span> نستنتج:</p>
+      <p class="math-equation">u<sub>n</sub> = (1 - 3v<sub>n</sub>)/(1 + v<sub>n</sub>) = [1 - 3(-1/3)<sup>n</sup>]/[1 + (-1/3)<sup>n</sup>]</p>
+      <p>وبما أن <span class="math">(-1/3)<sup>n</sup></span> يؤول إلى 0، فإن <span class="math">lim u<sub>n</sub> = 1</span>.</p>
+      <p><strong>3)</strong> مجموع حدود متتالية هندسية:</p>
+      <p class="math-equation">S<sub>n</sub> = 3/4 × [1 - (-1/3)<sup>n+1</sup>]</p>
+      <p>والمجموع اللوغارتمي:</p>
+      <p class="math-equation">T<sub>n</sub> = -n(n + 1)/2 × ln 3</p>`
+  },
+  {
+    id: "bac-2008-exp-subject-2",
+    branch: "science",
+    stream: "experimental",
+    year: "2008",
+    title: "بكالوريا 2008 - الموضوع الثاني - علوم تجريبية",
+    statementHtml: `<div class="bac-statement">
+      <p><strong>1.</strong> ادرس اتجاه تغير الدالة <span class="math">f</span> المعرفة على <span class="math">[0، +∞[</span> بـ <span class="math">f(x)=5x/(2x+1)</span>.</p>
+      <p><strong>2.</strong> نعرف المتتالية <span class="math">(uₙ)</span> كما يلي: <span class="math">u₀=3</span> و <span class="math">uₙ₊₁=f(uₙ)</span>.</p>
+      <ol>
+        <li>احسب الحدين <span class="math">u₁</span> و <span class="math">u₂</span>، ثم خمن اتجاه تغير المتتالية.</li>
+        <li>برهن بالتراجع أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">2&lt;uₙ≤3</span>.</li>
+        <li>ادرس اتجاه تغير المتتالية <span class="math">(uₙ)</span>.</li>
+      </ol>
+      <p><strong>3.</strong> نعرف المتتالية <span class="math">(vₙ)</span> على <span class="math">N</span> بـ <span class="math">vₙ=3ⁿ(1-2/uₙ)</span>.</p>
+      <ol>
+        <li>بين أن <span class="math">(vₙ)</span> هندسية أساسها <span class="math">3/5</span>، ثم اكتب <span class="math">vₙ</span> بدلالة <span class="math">n</span>.</li>
+        <li>استنتج بدلالة <span class="math">n</span> حساب المجموع <span class="math">Sₙ=v₀+5v₁+5²v₂+...+5ⁿvₙ</span>.</li>
+        <li>اكتب عبارة <span class="math">uₙ</span> بدلالة <span class="math">n</span>، ثم احسب <span class="math">lim uₙ</span>.</li>
+      </ol>
+      <p><strong>4.</strong> تحقق أنه من أجل كل عدد طبيعي <span class="math">n</span>: <span class="math">6/uₙ = 3 - 1/5ⁿ</span>.</p>
+      <p>استنتج بدلالة <span class="math">n</span> حساب المجموع <span class="math">Tₙ=6/u₀+6/u₁+...+6/uₙ</span>.</p>
+    </div>`,
+    solution: "f'(x)=5/(2x+1)²>0 إذن f متزايدة على [0,+∞[. u₁=15/7 و u₂=75/37. بالتراجع: إذا 2<uₙ≤3 فإن f(2)=2 و f(3)=15/7≤3، وبما أن f متزايدة نحصل على 2<uₙ₊₁≤15/7≤3. كما أن uₙ₊₁-uₙ=5uₙ/(2uₙ+1)-uₙ=2uₙ(2-uₙ)/(2uₙ+1)<0، إذن (uₙ) متناقصة ومحدودة من الأسفل بـ2. لدينا v₀=1/3، وبالحساب vₙ₊₁=(3/5)vₙ، ومنه vₙ=(1/3)(3/5)ⁿ. بما أن 1-2/uₙ=vₙ/3ⁿ=1/(3·5ⁿ)، فإن 2/uₙ=1-1/(3·5ⁿ)، وبالتالي uₙ=6·5ⁿ/(3·5ⁿ-1)، ومنه lim uₙ=2. كما أن 6/uₙ=3-1/5ⁿ، وبالتالي Tₙ=Σ(3-1/5ᵏ)=3(n+1)-5/4(1-1/5ⁿ⁺¹)."
+  },  {
     id: "bac-model-math",
     branch: "science",
     stream: "mathematics",
@@ -278,7 +373,9 @@ function renderModuleDetail() {
 }
 
 function renderExerciseCard(ex, id) {
-  return `<section class="exercise-card"><h3>${ex.title}</h3><p>${ex.text || ex.statement}</p><button type="button" class="ghost-action" data-toggle-solution="${id}">${state.openSolutions[id] ? "إخفاء الحل" : "إظهار الحل"}</button><div class="solution ${state.openSolutions[id] ? "show" : ""}">${ex.solution}</div></section>`;
+  const statement = ex.statementHtml || `<p>${ex.text || ex.statement}</p>`;
+  const figure = ex.figureHtml || "";
+  return `<section class="exercise-card"><h3>${ex.title}</h3>${figure}${statement}<button type="button" class="ghost-action" data-toggle-solution="${id}">${state.openSolutions[id] ? "إخفاء الحل" : "إظهار الحل"}</button><div class="solution ${state.openSolutions[id] ? "show" : ""}">${ex.solution}</div></section>`;
 }
 
 function renderPractice() {

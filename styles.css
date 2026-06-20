@@ -1352,3 +1352,82 @@ h1, h2, h3, h4, p { margin-top: 0; }
 @media (max-width: 760px) {
   .stats-grid { grid-template-columns: 1fr; }
 }
+
+.bac-statement {
+  display: grid;
+  gap: 10px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+.bac-statement p,
+.bac-statement ol {
+  margin: 0;
+}
+.bac-statement ol {
+  padding-inline-start: 24px;
+}
+.bac-statement li {
+  margin: 4px 0;
+}
+.bac-statement h4 {
+  margin: 10px 0 4px;
+  padding-bottom: 4px;
+  color: var(--ink);
+  font-size: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.solution .math-equation {
+  margin: 8px 0;
+  background: rgba(0,0,0,.18);
+}
+.math {
+  direction: ltr;
+  unicode-bidi: isolate;
+  color: var(--ink);
+  font-weight: 800;
+}
+.bac-figure {
+  margin: 8px 0 16px;
+  max-width: 520px;
+}
+.bac-graph {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #101719;
+}
+.graph-bg { fill: #101719; }
+.grid-lines path {
+  fill: none;
+  stroke: rgba(220, 245, 255, .22);
+  stroke-width: 1;
+  stroke-dasharray: 4 5;
+}
+.axes path {
+  fill: none;
+  stroke: rgba(234, 250, 255, .82);
+  stroke-width: 2;
+}
+.axis-labels text,
+.graph-label {
+  fill: #d9edf4;
+  font-size: 16px;
+  font-weight: 800;
+}
+.line-delta {
+  fill: none;
+  stroke: #f1f7fa;
+  stroke-width: 3;
+}
+.curve-f {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 4;
+}
+.graph-points circle {
+  fill: #f7fbff;
+  stroke: #071112;
+  stroke-width: 2;
+}
