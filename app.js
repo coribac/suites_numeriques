@@ -47,12 +47,65 @@ const modules = [
       "يمكن تعريف المتتالية بعبارة صريحة مثل uₙ = 2n + 1، أو بعلاقة تراجعية مثل u₀ = 3 و uₙ₊₁ = uₙ + 2.",
       "عند استعمال علاقة تراجعية يجب معرفة الحد الأول حتى نستطيع حساب الحدود التالية."
     ],
-    formulas: ["uₙ = f(n)", "uₙ₊₁ = f(uₙ)", "جدول القيم يساعد على ملاحظة السلوك العام للمتتالية."],
+    scienceLessonHtml: `<section class="lesson-reminder">
+      <h3>تذكير حول المتتاليات العددية</h3>
+      <div class="reminder-block">
+        <h4>1. مفهوم المتتالية</h4>
+        <p><strong>تعريف:</strong> متتالية عددية حقيقية هي دالة معرفة على جزء من <span class="math">ℕ</span>. نرمز لصورة العدد الطبيعي <span class="math">n</span> بالرمز <span class="math">u<sub>n</sub></span>، ويسمى هذا العدد حدا من حدود المتتالية.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>2. اتجاه تغير متتالية عددية</h4>
+        <p><strong>متزايدة:</strong> تكون <span class="math">(u<sub>n</sub>)</span> متزايدة إذا وفقط إذا كان من أجل كل <span class="math">n</span>: <span class="math">u<sub>n+1</sub> ≥ u<sub>n</sub></span>. وتكون متزايدة تماما إذا كان <span class="math">u<sub>n+1</sub> &gt; u<sub>n</sub></span>.</p>
+        <p><strong>متناقصة:</strong> تكون <span class="math">(u<sub>n</sub>)</span> متناقصة إذا وفقط إذا كان <span class="math">u<sub>n+1</sub> ≤ u<sub>n</sub></span>. وتكون متناقصة تماما إذا كان <span class="math">u<sub>n+1</sub> &lt; u<sub>n</sub></span>.</p>
+        <p><strong>ثابتة:</strong> تكون <span class="math">(u<sub>n</sub>)</span> ثابتة إذا وفقط إذا كان <span class="math">u<sub>n+1</sub>=u<sub>n</sub></span> من أجل كل <span class="math">n</span>.</p>
+        <p><strong>رتيبة:</strong> نقول إن المتتالية رتيبة إذا كانت متزايدة أو متناقصة.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>3. المتتاليات الحسابية</h4>
+        <p><strong>تعريف:</strong> <span class="math">(u<sub>n</sub>)</span> حسابية حدها الأول <span class="math">u<sub>0</sub></span> وأساسها <span class="math">r</span> إذا وفقط إذا كان:</p>
+        <p class="math-equation">u<sub>n+1</sub> = u<sub>n</sub> + r</p>
+        <div class="reminder-formulas"><span><strong>الحد العام:</strong> <span class="math">u<sub>n</sub>=u<sub>0</sub>+nr</span></span><span><strong>المجموع:</strong> <span class="math">S=u<sub>0</sub>+...+u<sub>n</sub>=(n+1)(u<sub>0</sub>+u<sub>n</sub>)/2</span></span></div>
+      </div>
+      <div class="reminder-block">
+        <h4>4. المتتاليات الهندسية</h4>
+        <p><strong>تعريف:</strong> <span class="math">(u<sub>n</sub>)</span> هندسية حدها الأول <span class="math">u<sub>0</sub></span> وأساسها <span class="math">q</span> إذا وفقط إذا كان:</p>
+        <p class="math-equation">u<sub>n+1</sub> = q u<sub>n</sub></p>
+        <div class="reminder-formulas"><span><strong>الحد العام:</strong> <span class="math">u<sub>n</sub>=u<sub>0</sub>q<sup>n</sup></span></span><span><strong>المجموع:</strong> إذا <span class="math">q≠1</span> فإن <span class="math">S=u<sub>0</sub>(1-q<sup>n+1</sup>)/(1-q)</span></span><span><strong>حالة خاصة:</strong> إذا <span class="math">q=1</span> فإن <span class="math">S=(n+1)u<sub>0</sub></span></span></div>
+        <p><strong>نهاية هندسية:</strong> إذا <span class="math">|q|&lt;1</span> فإن <span class="math">q<sup>n</sup>→0</span>. وإذا <span class="math">q&gt;1</span> و<span class="math">u<sub>0</sub>&gt;0</span> فإن <span class="math">u<sub>n</sub>→+∞</span>، وإذا <span class="math">q&gt;1</span> و<span class="math">u<sub>0</sub>&lt;0</span> فإن <span class="math">u<sub>n</sub>→-∞</span>.</p>
+      </div>
+    </section>`,
+    managementTitle: "مدخل إلى المتتاليات في التسيير والاقتصاد",
+    managementSummary: "قراءة تطور كمية اقتصادية عبر الزمن: رأس مال، إنتاج، مخزون، أو عدد عمال.",
+    managementLessonOnly: true,
+    managementLessonHtml: `<section class="lesson-reminder"><h3>المتتاليات في التسيير والاقتصاد</h3><div class="reminder-block"><p>نستعمل المتتاليات لوصف تطور مقدار اقتصادي عبر فترات منتظمة مثل السنوات أو الأشهر.</p><p>إذا رمزنا بـ <span class="math">u<sub>n</sub></span> إلى قيمة المقدار في الفترة رقم <span class="math">n</span>، فإن <span class="math">u<sub>0</sub></span> يمثل القيمة الابتدائية.</p><p>يمكن أن يكون التطور بزيادة ثابتة، أو بنسبة مئوية ثابتة، أو بعلاقة تراجعية تجمع بين النسبة والإضافة.</p></div><div class="reminder-block"><h4>أمثلة اقتصادية</h4><p>رأس مال يزداد كل سنة بفائدة ثابتة.</p><p>عدد عمال ينقص بنسبة معينة ثم تضاف توظيفات جديدة.</p><p>قيمة آلة تنخفض كل سنة بنسبة مئوية.</p></div></section>`,    formulas: ["uₙ = f(n)", "uₙ₊₁ = f(uₙ)", "جدول القيم يساعد على ملاحظة السلوك العام للمتتالية."],
     activities: [
       { title: "نشاط 1", text: "لتكن uₙ = 3n - 2. احسب u₀ و u₁ و u₂ و u₅.", answer: "u₀=-2 ، u₁=1 ، u₂=4 ، u₅=13." },
       { title: "نشاط 2", text: "نعرف v₀ = 4 و vₙ₊₁ = vₙ + 3. احسب الحدود الأربعة الأولى.", answer: "v₀=4 ، v₁=7 ، v₂=10 ، v₃=13." }
     ],
-    exercises: [
+    scienceExercises: [
+      {
+        title: "تمرين محلول 1",
+        statementHtml: `<p>لتكن المتتالية <span class="math">(u<sub>n</sub>)</span> المعرفة بحدها الأول <span class="math">u<sub>0</sub>=3</span> وبالعلاقة:</p><p class="math-equation">u<sub>n+1</sub>=u<sub>n</sub>-5n-1</p><p>ولتكن المتتالية <span class="math">(v<sub>n</sub>)</span> المعرفة من أجل كل عدد طبيعي <span class="math">n</span> بالعلاقة:</p><p class="math-equation">v<sub>n</sub>=u<sub>n+1</sub>-u<sub>n</sub></p><ol><li>بيّن أن <span class="math">(v<sub>n</sub>)</span> متتالية حسابية، وعيّن أساسها وحدها الأول.</li><li>احسب بدلالة <span class="math">n</span> المجموع <span class="math">S=v<sub>0</sub>+v<sub>1</sub>+...+v<sub>n-1</sub></span>.</li><li>استنتج عبارة <span class="math">u<sub>n</sub></span> بدلالة <span class="math">n</span>.</li></ol>`,
+        quickSolution: `<p><span class="math">v<sub>n</sub>=-5n-1</span>، إذن <span class="math">(v<sub>n</sub>)</span> حسابية أساسها <span class="math">r=-5</span> وحدها الأول <span class="math">v<sub>0</sub>=-1</span>.</p><p><span class="math">S=n(3-5n)/2</span> و<span class="math">u<sub>n</sub>=3+n(3-5n)/2</span>.</p>`,
+        solution: `<p>نحسب أولا:</p><p class="math-equation">v<sub>n</sub>=u<sub>n+1</sub>-u<sub>n</sub>=-5n-1</p><p>إذن:</p><p class="math-equation">v<sub>0</sub>=-1</p><p>كما أن:</p><p class="math-equation">v<sub>n+1</sub>-v<sub>n</sub>=[-5(n+1)-1]-[-5n-1]=-5</p><p>ومنه <span class="math">(v<sub>n</sub>)</span> حسابية أساسها <span class="math">r=-5</span> وحدها الأول <span class="math">v<sub>0</sub>=-1</span>.</p><p>نحسب المجموع من <span class="math">v_0</span> إلى <span class="math">v_{n-1}</span>، وعدد حدوده <span class="math">n</span>:</p><p class="math-equation">S= n/2[2v<sub>0</sub>+(n-1)r]</p><p class="math-equation">S=n/2[-2-5(n-1)]=n/2(3-5n)</p><p>وبما أن:</p><p class="math-equation">S=(u<sub>1</sub>-u<sub>0</sub>)+...+(u<sub>n</sub>-u<sub>n-1</sub>)=u<sub>n</sub>-u<sub>0</sub></p><p>فإن:</p><p class="math-equation">u<sub>n</sub>=u<sub>0</sub>+S=3+n/2(3-5n)</p>`,
+        detailedSolution: `<p><strong>الفكرة:</strong> العلاقة المعطاة تجعل الفرق <span class="math">u_{n+1}-u_n</span> معروفا مباشرة، لذلك ندرسه كمتتالية جديدة.</p><p>نجد <span class="math">v_n=-5n-1</span>، وهي صيغة من الشكل <span class="math">an+b</span>، لذلك تكون حسابية. أساسها هو فرق حدين متتاليين:</p><p class="math-equation">v<sub>n+1</sub>-v<sub>n</sub>=-5</p><p>عند جمع الفروق يحدث اختزال متتال:</p><p class="math-equation">(u_1-u_0)+(u_2-u_1)+...+(u_n-u_{n-1})=u_n-u_0</p><p>لذلك نحسب مجموع <span class="math">v_k</span> ثم نضيف <span class="math">u_0=3</span>.</p>`,
+        conceptHints: [
+          { title: "تحويل الفرق", hint: "اكتب v_n مباشرة باستعمال العلاقة u_{n+1}=u_n-5n-1، ثم احسب v_{n+1}-v_n." },
+          { title: "مجموع الفروق", hint: "عند جمع u_{k+1}-u_k من k=0 إلى n-1 تختفي الحدود الوسطى ويبقى u_n-u_0." }
+        ]
+      },
+      {
+        title: "تمرين محلول 2",
+        statementHtml: `<p>لتكن المتتالية <span class="math">(u<sub>n</sub>)</span> المعرفة بحدها الأول <span class="math">u<sub>0</sub>=2</span> وبالعلاقة:</p><p class="math-equation">u<sub>n+1</sub>=1/3 u<sub>n</sub>+2</p><p>ولتكن المتتالية <span class="math">(v<sub>n</sub>)</span> المعرفة من أجل كل عدد طبيعي <span class="math">n</span> بالعلاقة:</p><p class="math-equation">v<sub>n</sub>=u<sub>n</sub>-3</p><ol><li>بيّن أن <span class="math">(v<sub>n</sub>)</span> متتالية هندسية وعيّن أساسها وحدها الأول.</li><li>احسب <span class="math">v<sub>n</sub></span> بدلالة <span class="math">n</span>، ثم استنتج <span class="math">u<sub>n</sub></span>.</li><li>احسب المجموع <span class="math">S=v<sub>0</sub>+...+v<sub>n</sub></span>.</li><li>ادرس اتجاه تغير <span class="math">(v<sub>n</sub>)</span> و<span class="math">(u<sub>n</sub>)</span>، ثم احسب نهايتيهما ونهاية <span class="math">S</span>.</li></ol>`,
+        quickSolution: `<p><span class="math">v<sub>0</sub>=-1</span> و<span class="math">v<sub>n+1</sub>=1/3 v<sub>n</sub></span>، إذن الأساس <span class="math">q=1/3</span>.</p><p><span class="math">v<sub>n</sub>=-(1/3)<sup>n</sup></span> و<span class="math">u<sub>n</sub>=3-(1/3)<sup>n</sup></span>.</p><p><span class="math">S=-3/2(1-(1/3)<sup>n+1</sup>)</span>. المتتاليتان <span class="math">v_n</span> و<span class="math">u_n</span> متزايدتان، و<span class="math">lim v_n=0</span>، <span class="math">lim u_n=3</span>، <span class="math">lim S=-3/2</span>.</p>`,
+        solution: `<p>لدينا:</p><p class="math-equation">v<sub>n+1</sub>=u<sub>n+1</sub>-3=1/3u<sub>n</sub>+2-3=1/3(u<sub>n</sub>-3)=1/3v<sub>n</sub></p><p>إذن <span class="math">(v_n)</span> هندسية أساسها <span class="math">q=1/3</span>، وحدها الأول:</p><p class="math-equation">v<sub>0</sub>=u<sub>0</sub>-3=2-3=-1</p><p>ومنه:</p><p class="math-equation">v<sub>n</sub>=-(1/3)<sup>n</sup></p><p>وبالتالي:</p><p class="math-equation">u<sub>n</sub>=v<sub>n</sub>+3=3-(1/3)<sup>n</sup></p><p>المجموع:</p><p class="math-equation">S=v<sub>0</sub>+...+v<sub>n</sub>=-[1-(1/3)<sup>n+1</sup>]/(1-1/3)=-3/2(1-(1/3)<sup>n+1</sup>)</p><p>كما أن:</p><p class="math-equation">v<sub>n+1</sub>-v<sub>n</sub>=-(1/3)<sup>n+1</sup>+(1/3)<sup>n</sup>=2/3(1/3)<sup>n</sup>&gt;0</p><p>إذن <span class="math">(v_n)</span> متزايدة، وبما أن <span class="math">u_n=v_n+3</span> فإن <span class="math">(u_n)</span> متزايدة أيضا.</p><p>وبما أن <span class="math">0&lt;1/3&lt;1</span> فإن <span class="math">(1/3)^n→0</span>، ومنه:</p><p class="math-equation">lim v<sub>n</sub>=0, &nbsp; lim u<sub>n</sub>=3, &nbsp; lim S=-3/2</p>`,
+        detailedSolution: `<p><strong>الفكرة:</strong> اخترنا <span class="math">v_n=u_n-3</span> لأن العدد <span class="math">3</span> هو العدد الذي يجعل العلاقة التراجعية تتحول إلى ضرب في <span class="math">1/3</span>.</p><p>بعد التعويض نحصل على <span class="math">v_{n+1}=1/3 v_n</span>، وهذا هو تعريف المتتالية الهندسية.</p><p>لدراسة الاتجاه، لا نعتمد على الشكل فقط؛ نحسب <span class="math">v_{n+1}-v_n</span> فنجد أنه موجب. وبما أن <span class="math">u_n</span> يساوي <span class="math">v_n</span> زائد ثابت، فله نفس اتجاه التغير.</p>`,
+        conceptHints: [
+          { title: "اختيار v_n", hint: "عوض u_n ب v_n+3 داخل العلاقة، وسترى أن الثابت يختفي." },
+          { title: "نهاية القوة", hint: "استعمل أن 0<1/3<1، لذلك (1/3)^n يؤول إلى 0." }
+        ]
+      }
+    ],    exercises: [
       { title: "تمرين 1", text: "لتكن uₙ = n² - 1. احسب u₀ و u₂ و u₄، ثم بين هل العدد 8 حد من حدودها.", solution: "u₀=-1، u₂=3، u₄=15. نحل n²-1=8 فنجد n²=9 ومنه n=3، إذن 8 حد من حدودها." },
       { title: "تمرين 2", text: "لتكن u₀=2 و uₙ₊₁=2uₙ-1. احسب u₁ و u₂ و u₃.", solution: "u₁=3، u₂=5، u₃=9." }
     ]
@@ -68,7 +121,49 @@ const modules = [
       "إذا كانت u متتالية حسابية أساسها r فإن uₙ₊₁ = uₙ + r.",
       "الزيادة أو النقصان المنتظم في جدول أو وضعية مالية غالبا ما يقود إلى متتالية حسابية."
     ],
-    formulas: ["uₙ = u₀ + nr", "uₙ = uₚ + (n-p)r", "S = عدد الحدود × (الحد الأول + الحد الأخير) / 2"],
+    scienceTitle: "البرهان بالتراجع",
+    scienceSummary: "تعلم مبدأ البرهان بالتراجع: التحقق عند البداية ثم الانتقال من n إلى n+1.",
+    scienceLessonOnly: true,
+    scienceLessonHtml: `<section class="lesson-reminder">
+      <h3>الاستدلال بالتراجع</h3>
+      <div class="reminder-block">
+        <h4>1. مبدأ الاستدلال بالتراجع</h4>
+        <p><strong>استنتاج:</strong> <span class="math">P(n)</span> خاصية متعلقة بعدد طبيعي <span class="math">n</span>، ابتداء من عدد طبيعي <span class="math">n<sub>0</sub></span>.</p>
+        <p>للبرهان على صحة الخاصية <span class="math">P(n)</span> من أجل كل عدد طبيعي <span class="math">n ≥ n<sub>0</sub></span> ننجز مرحلتين:</p>
+        <p><strong>المرحلة 1:</strong> نتحقق من صحة الخاصية عند البداية، أي نثبت <span class="math">P(n<sub>0</sub>)</span>.</p>
+        <p><strong>المرحلة 2:</strong> نفرض أن الخاصية صحيحة من أجل عدد طبيعي <span class="math">n ≥ n<sub>0</sub></span>، ثم نبرهن أنها صحيحة من أجل <span class="math">n+1</span>.</p>
+        <p class="math-equation">P(n<sub>0</sub>) صحيحة و [P(n) ⇒ P(n+1)] ⟹ P(n) صحيحة لكل n ≥ n<sub>0</sub></p>
+      </div>
+      <div class="reminder-block">
+        <h4>ملاحظات مهمة</h4>
+        <p>عدد البداية <span class="math">n<sub>0</sub></span> هو أول عدد طبيعي تكون الخاصية مطلوبة ابتداء منه.</p>
+        <p>عبارة الانتقال تعني: إذا كانت الخاصية صحيحة عند الرتبة <span class="math">n</span>، فإنها تكون صحيحة عند الرتبة الموالية <span class="math">n+1</span>.</p>
+        <p>لا يكفي التحقق من عدة قيم فقط؛ بل يجب إثبات الانتقال العام من <span class="math">n</span> إلى <span class="math">n+1</span>.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>2. متى نستعمل الاستدلال بالتراجع؟</h4>
+        <p>نستعمله غالبا لإثبات خاصية مطلوبة من أجل كل عدد طبيعي، مثل حصر متتالية، صيغة حد عام، قابلية القسمة، أو متراجحة تعتمد على <span class="math">n</span>.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>مثال محلول</h4>
+        <p>نثبت أنه من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+        <p class="math-equation">4<sup>n</sup> + 2 عدد مضاعف للعدد 3</p>
+        <p><strong>المرحلة 1:</strong> عند <span class="math">n=0</span> نجد:</p>
+        <p class="math-equation">4<sup>0</sup>+2=1+2=3</p>
+        <p>والعدد <span class="math">3</span> مضاعف للعدد <span class="math">3</span>، إذن الخاصية صحيحة عند البداية.</p>
+        <p><strong>المرحلة 2:</strong> نفرض أن الخاصية صحيحة من أجل عدد طبيعي <span class="math">n</span>، أي يوجد عدد صحيح <span class="math">k</span> بحيث:</p>
+        <p class="math-equation">4<sup>n</sup>+2=3k</p>
+        <p>نبرهن صحة الخاصية من أجل <span class="math">n+1</span>:</p>
+        <p class="math-equation">4<sup>n+1</sup>+2=4×4<sup>n</sup>+2=4(4<sup>n</sup>+2)-6</p>
+        <p>وباستخدام فرضية التراجع:</p>
+        <p class="math-equation">4<sup>n+1</sup>+2=4×3k-6=3(4k-2)</p>
+        <p>إذن <span class="math">4<sup>n+1</sup>+2</span> مضاعف للعدد <span class="math">3</span>. وبالتالي الخاصية صحيحة لكل عدد طبيعي <span class="math">n</span>.</p>
+      </div>
+    </section>`,
+    managementTitle: "المتتالية الحسابية في الوضعيات الاقتصادية",
+    managementSummary: "نمذجة زيادة أو نقصان ثابت: ادخار دوري، إنتاج منتظم، أو مصاريف شهرية.",
+    managementLessonOnly: true,
+    managementLessonHtml: `<section class="lesson-reminder"><h3>المتتالية الحسابية في الاقتصاد</h3><div class="reminder-block"><p>عندما يتغير مقدار اقتصادي كل فترة بنفس القيمة المطلقة، نحصل غالبا على متتالية حسابية.</p><p class="math-equation">u<sub>n+1</sub>=u<sub>n</sub>+r</p><p>العدد <span class="math">r</span> هو مقدار الزيادة أو النقصان الثابت.</p></div><div class="reminder-block"><h4>أمثلة</h4><p>ادخار مبلغ ثابت كل شهر.</p><p>إنتاج يزيد بـ 100 وحدة كل أسبوع.</p><p>دين ينقص بقسط ثابت في كل فترة.</p></div></section>`,    formulas: ["uₙ = u₀ + nr", "uₙ = uₚ + (n-p)r", "S = عدد الحدود × (الحد الأول + الحد الأخير) / 2"],
     activities: [
       { title: "نشاط", text: "متتالية حسابية حدها الأول 5 وأساسها 4. احسب u₁ و u₂ و u₁₀.", answer: "u₁=9، u₂=13، u₁₀=45." }
     ],
@@ -88,8 +183,121 @@ const modules = [
       "إذا كانت u متتالية هندسية أساسها q فإن uₙ₊₁ = q uₙ.",
       "النمو بنسبة مئوية ثابتة أو التناقص بنسبة ثابتة يقود غالبا إلى متتالية هندسية."
     ],
-    formulas: ["uₙ = u₀ qⁿ", "uₙ = uₚ qⁿ⁻ᵖ", "1 + q + ... + qⁿ = (1 - qⁿ⁺¹)/(1-q) إذا كان q ≠ 1"],
-    activities: [
+    scienceTitle: "تقارب متتالية عددية",
+    scienceSummary: "فهم معنى نهاية متتالية، التقارب، والنهايات غير المنتهية باستعمال u_n=f(n).",
+    scienceLessonOnly: true,
+    scienceLessonHtml: `<section class="lesson-reminder">
+      <h3>تقارب متتالية عددية</h3>
+      <div class="reminder-block">
+        <h4>1. نهاية متتالية عددية</h4>
+        <p><strong>تعريف:</strong> نقول إن المتتالية <span class="math">(u<sub>n</sub>)</span> تقبل نهاية عددية <span class="math">l</span> إذا اقتربت حدودها من العدد <span class="math">l</span> عندما يكبر <span class="math">n</span> بدون حد.</p>
+        <p>نكتب في هذه الحالة:</p>
+        <p class="math-equation">lim<sub>n→+∞</sub> u<sub>n</sub> = l</p>
+        <p>ونقول إن المتتالية <span class="math">(u<sub>n</sub>)</span> متقاربة.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>قاعدة باستعمال دالة</h4>
+        <p>إذا كانت المتتالية معرفة كما يلي <span class="math">u<sub>n</sub>=f(n)</span>، وكانت <span class="math">f</span> دالة معرفة على مجال من الشكل <span class="math">[α,+∞[</span>، فإن:</p>
+        <p class="math-equation">إذا كان lim<sub>x→+∞</sub> f(x)=l فإن lim<sub>n→+∞</sub> u<sub>n</sub>=l</p>
+      </div>
+      <div class="reminder-block">
+        <h4>مثال 1</h4>
+        <p>لتكن المتتالية <span class="math">(u<sub>n</sub>)</span> المعرفة على <span class="math">ℕ</span> كما يلي:</p>
+        <p class="math-equation">u<sub>n</sub>=(-4n+1)/(3n+2)</p>
+        <p>نأخذ الدالة <span class="math">f</span> المعرفة على <span class="math">[0,+∞[</span> بـ:</p>
+        <p class="math-equation">f(x)=(-4x+1)/(3x+2)</p>
+        <p>لدينا <span class="math">u<sub>n</sub>=f(n)</span>، وبما أن:</p>
+        <p class="math-equation">lim<sub>x→+∞</sub> f(x) = -4/3</p>
+        <p>فإن:</p>
+        <p class="math-equation">lim<sub>n→+∞</sub> u<sub>n</sub> = -4/3</p>
+        <p><strong>النتيجة:</strong> المتتالية <span class="math">(u<sub>n</sub>)</span> متقاربة.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>ملاحظة: النهاية قد لا توجد</h4>
+        <p>لتكن الدالة <span class="math">f</span> المعرفة على <span class="math">[0,+∞[</span> بـ:</p>
+        <p class="math-equation">f(x)=x cos(2πx)/(x+1)</p>
+        <p>ونعرف المتتالية <span class="math">(u<sub>n</sub>)</span> كما يلي:</p>
+        <p class="math-equation">u<sub>n</sub>=n/(n+1)</p>
+        <p>لأن <span class="math">cos(2πn)=1</span> من أجل كل عدد طبيعي <span class="math">n</span>، فإن:</p>
+        <p class="math-equation">u<sub>n</sub>=f(n)=n/(n+1)</p>
+        <p>إذن:</p>
+        <p class="math-equation">lim<sub>n→+∞</sub> u<sub>n</sub>=1</p>
+        <p>لكن <span class="math">lim<sub>x→+∞</sub> f(x)</span> غير موجودة بسبب تذبذب <span class="math">cos(2πx)</span>. لذلك لا نعكس القاعدة دائما.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>2. نهاية غير منتهية</h4>
+        <p>نقول إن نهاية المتتالية <span class="math">(u<sub>n</sub>)</span> هي <span class="math">+∞</span> إذا كانت حدودها تكبر دون حد، ونكتب:</p>
+        <p class="math-equation">lim<sub>n→+∞</sub> u<sub>n</sub> = +∞</p>
+        <p>ونقول إن نهايتها هي <span class="math">-∞</span> إذا كانت حدودها تنقص دون حد، ونكتب:</p>
+        <p class="math-equation">lim<sub>n→+∞</sub> u<sub>n</sub> = -∞</p>
+      </div>
+      <div class="reminder-block">
+        <h4>3. متتالية محدودة</h4>
+        <p><strong>تعريف:</strong> لتكن <span class="math">(u<sub>n</sub>)</span> متتالية عددية معرفة على <span class="math">ℕ</span>.</p>
+        <p>نقول إن <span class="math">(u<sub>n</sub>)</span> محدودة من الأعلى إذا وجد عدد حقيقي <span class="math">A</span> بحيث من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+        <p class="math-equation">u<sub>n</sub> ≤ A</p>
+        <p>ويسمى <span class="math">A</span> عنصرا حادا من الأعلى.</p>
+        <p>ونقول إن <span class="math">(u<sub>n</sub>)</span> محدودة من الأسفل إذا وجد عدد حقيقي <span class="math">B</span> بحيث من أجل كل عدد طبيعي <span class="math">n</span>:</p>
+        <p class="math-equation">u<sub>n</sub> ≥ B</p>
+        <p>ويسمى <span class="math">B</span> عنصرا حادا من الأسفل.</p>
+        <p>ونقول إن المتتالية <span class="math">(u<sub>n</sub>)</span> محدودة إذا كانت محدودة من الأعلى ومن الأسفل معا.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>مثال 2</h4>
+        <p>لتكن المتتالية <span class="math">(u<sub>n</sub>)</span> المعرفة كما يلي:</p>
+        <p class="math-equation">u<sub>n</sub>=4n/(n+3)</p>
+        <p>من خلال القيم الأولى أو البيان يمكن تخمين أن المتتالية محدودة من الأسفل بالعدد <span class="math">1</span>، ومحدودة من الأعلى بالعدد <span class="math">4</span>.</p>
+        <p>نبرهن ذلك جبريا. لدينا:</p>
+        <p class="math-equation">u<sub>n</sub> ≥ 1 ⇔ 4n/(n+3) ≥ 1 ⇔ 4n ≥ n+3 ⇔ 3n ≥ 3 ⇔ n ≥ 1</p>
+        <p>إذن من أجل <span class="math">n ≥ 1</span> تكون <span class="math">u<sub>n</sub> ≥ 1</span>.</p>
+        <p>كما أن:</p>
+        <p class="math-equation">u<sub>n</sub> &lt; 4 ⇔ 4n/(n+3) &lt; 4 ⇔ 4n &lt; 4n+12</p>
+        <p>وهذه صحيحة دائما، إذن المتتالية محدودة من الأعلى بالعدد <span class="math">4</span>.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>مثال 3</h4>
+        <p>لتكن المتتالية <span class="math">(u<sub>n</sub>)</span> المعرفة كما يلي:</p>
+        <p class="math-equation">u<sub>n</sub>=(2n+3)/n</p>
+        <p>نكتب:</p>
+        <p class="math-equation">u<sub>n</sub>=2+3/n</p>
+        <p>ومن أجل كل <span class="math">n&gt;0</span> لدينا <span class="math">3/n&gt;0</span>، إذن:</p>
+        <p class="math-equation">u<sub>n</sub> ≥ 2</p>
+        <p>أي أن المتتالية محدودة من الأسفل بالعدد <span class="math">2</span>.</p>
+        <p>لكنها غير محدودة من الأعلى على <span class="math">ℕ*</span> إذا لم نثبت وجود عدد حقيقي أكبر من كل حدودها. عند دراسة الحصر يجب الانتباه إلى مجال التعريف والقيم الأولى.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>ملاحظة مهمة</h4>
+        <p>إذا كانت <span class="math">(u<sub>n</sub>)</span> متزايدة ومحدودة من الأعلى فإنها متقاربة.</p>
+        <p>إذا كانت <span class="math">(u<sub>n</sub>)</span> متناقصة ومحدودة من الأسفل فإنها متقاربة.</p>
+        <p>هذه القاعدة تستعمل كثيرا لإثبات تقارب متتالية دون معرفة نهايتها مباشرة.</p>
+      </div>      <div class="reminder-block">
+        <h4>تذكير عملي</h4>
+        <p>إذا كانت <span class="math">u<sub>n</sub>=f(n)</span> و<span class="math">lim<sub>x→+∞</sub> f(x)=+∞</span>، فإن <span class="math">lim<sub>n→+∞</sub>u<sub>n</sub>=+∞</span>.</p>
+        <p>وإذا كانت <span class="math">lim<sub>x→+∞</sub> f(x)=-∞</span>، فإن <span class="math">lim<sub>n→+∞</sub>u<sub>n</sub>=-∞</span>.</p>
+      </div>
+    </section>`,
+    managementTitle: "المتتالية الهندسية والنسب المئوية",
+    managementSummary: "نمذجة تطور بنسبة ثابتة: فوائد مركبة، تضخم، انخفاض قيمة، أو نمو مبيعات.",
+    managementLessonOnly: true,
+    managementLessonHtml: `<section class="lesson-reminder"><h3>المتتالية الهندسية في التسيير</h3><div class="reminder-block"><p>عندما يتغير مقدار اقتصادي كل فترة بنفس النسبة المئوية، نستعمل متتالية هندسية.</p><p class="math-equation">u<sub>n+1</sub>=q u<sub>n</sub></p><p>إذا كانت الزيادة بنسبة <span class="math">t%</span> فإن <span class="math">q=1+t/100</span>. وإذا كان النقصان بنسبة <span class="math">t%</span> فإن <span class="math">q=1-t/100</span>.</p></div><div class="reminder-block"><h4>أمثلة</h4><p>فائدة مركبة سنوية.</p><p>قيمة سيارة تنخفض بنسبة ثابتة كل سنة.</p><p>رقم أعمال مؤسسة ينمو بنسبة ثابتة.</p></div></section>`,    formulas: ["uₙ = u₀ qⁿ", "uₙ = uₚ qⁿ⁻ᵖ", "1 + q + ... + qⁿ = (1 - qⁿ⁺¹)/(1-q) إذا كان q ≠ 1"],
+    scienceExercises: [
+      {
+        title: "تمرين محلول 1",
+        statementHtml: `<p>لتكن المتتالية <span class="math">(u<sub>n</sub>)</span> معرفة في <span class="math">ℕ*</span> كما يلي:</p><p class="math-equation">u<sub>n</sub>=(n<sup>2</sup>+n+9)/n</p><p>أثبت أن المتتالية <span class="math">(u<sub>n</sub>)</span> محدودة من الأسفل.</p>`,
+        quickSolution: `<p><span class="math">u<sub>n</sub>≥7</span> لكل <span class="math">n∈ℕ*</span>، إذن <span class="math">(u<sub>n</sub>)</span> محدودة من الأسفل بالعدد <span class="math">7</span>.</p>`,
+        solution: `<p>نرفق بالمتتالية الدالة <span class="math">f</span> المعرفة على <span class="math">]0,+∞[</span> بـ:</p><p class="math-equation">f(x)=(x<sup>2</sup>+x+9)/x</p><p>لدينا <span class="math">u<sub>n</sub>=f(n)</span>. نحسب المشتقة:</p><p class="math-equation">f'(x)=(x<sup>2</sup>-9)/x<sup>2</sup></p><p>إشارة <span class="math">f'(x)</span> هي إشارة <span class="math">x<sup>2</sup>-9</span>. إذن <span class="math">f</span> متناقصة على <span class="math">]0,3]</span> ومتزايدة على <span class="math">[3,+∞[</span>.</p><p class="math-equation">f(3)=(9+3+9)/3=7</p><p>إذن من أجل كل <span class="math">x&gt;0</span>: <span class="math">f(x)≥7</span>. ومنه لكل <span class="math">n∈ℕ*</span>: <span class="math">u<sub>n</sub>≥7</span>.</p>`,
+        detailedSolution: `<p><strong>الطريقة:</strong> ندرس الدالة المرافقة <span class="math">f(x)=(x^2+x+9)/x</span>. بعد دراسة تغيراتها نجد أن أصغر قيمة هي <span class="math">7</span> عند <span class="math">x=3</span>. لذلك تكون كل حدود المتتالية أكبر أو تساوي <span class="math">7</span>.</p>`,
+        conceptHints: [{ title: "الدالة المرافقة", hint: "اكتب u_n=f(n)، ثم ادرس تغيرات f لإيجاد قيمة صغرى." }]
+      },
+      {
+        title: "تمرين محلول 2",
+        statementHtml: `<p>لتكن المتتالية <span class="math">(u<sub>n</sub>)</span> معرفة في <span class="math">ℕ</span> كما يلي:</p><p class="math-equation">u<sub>n</sub>=(2n<sup>2</sup>+1)/(n<sup>2</sup>+4)</p><p>أثبت أن المتتالية <span class="math">(u<sub>n</sub>)</span> محدودة من الأعلى بالعدد <span class="math">2</span>.</p>`,
+        quickSolution: `<p><span class="math">u<sub>n</sub>-2=-7/(n<sup>2</sup>+4)&lt;0</span> لكل <span class="math">n∈ℕ</span>. إذن <span class="math">u<sub>n</sub>&lt;2</span>.</p>`,
+        solution: `<p>نحسب:</p><p class="math-equation">u<sub>n</sub>-2=(2n<sup>2</sup>+1)/(n<sup>2</sup>+4)-2</p><p>نوحد المقام:</p><p class="math-equation">u<sub>n</sub>-2=(2n<sup>2</sup>+1-2n<sup>2</sup>-8)/(n<sup>2</sup>+4)</p><p>إذن:</p><p class="math-equation">u<sub>n</sub>-2=-7/(n<sup>2</sup>+4)</p><p>وبما أن <span class="math">n<sup>2</sup>+4&gt;0</span> فإن <span class="math">u<sub>n</sub>-2&lt;0</span>، ومنه <span class="math">u<sub>n</sub>&lt;2</span>. إذن المتتالية محدودة من الأعلى بالعدد <span class="math">2</span>.</p>`,
+        detailedSolution: `<p><strong>الفكرة:</strong> لإثبات أن <span class="math">2</span> حد من الأعلى، نحسب الفرق <span class="math">u_n-2</span>. بعد التبسيط نحصل على كسر بسطه سالب ومقامه موجب دائما، وبالتالي <span class="math">u_n&lt;2</span>.</p>`,
+        conceptHints: [{ title: "حد من الأعلى", hint: "احسب u_n-2. إذا كان الفرق سالبا، فالعدد 2 حد من الأعلى." }]
+      }
+    ],    activities: [
       { title: "نشاط", text: "متتالية هندسية حدها الأول 3 وأساسها 2. احسب الحدود الأربعة الأولى.", answer: "3، 6، 12، 24." }
     ],
     exercises: [
@@ -108,8 +316,69 @@ const modules = [
       "في المتتاليات ذات الحدود الموجبة يمكن أحيانا استعمال النسبة uₙ₊₁ / uₙ.",
       "المقارنة بين متتاليتين تساعد على حصر الحدود واستنتاج سلوكها."
     ],
-    formulas: ["uₙ₊₁ - uₙ ≥ 0 ⇒ u متزايدة", "uₙ₊₁ - uₙ ≤ 0 ⇒ u متناقصة"],
-    activities: [
+    scienceTitle: "متتاليتان متجاورتان",
+    scienceSummary: "تعرف المتتاليتين المتجاورتين وإثبات تقاربهما إلى نفس النهاية.",
+    scienceLessonOnly: true,
+    scienceLessonHtml: `<section class="lesson-reminder">
+      <h3>متتاليتان متجاورتان</h3>
+      <div class="reminder-block">
+        <h4>تعريف</h4>
+        <p>تكون متتاليتان عدديتان <span class="math">(u<sub>n</sub>)</span> و<span class="math">(v<sub>n</sub>)</span> متجاورتين إذا كانت إحداهما متزايدة والأخرى متناقصة، وكان الفرق بينهما يؤول إلى الصفر.</p>
+        <p class="math-equation">lim<sub>n→+∞</sub>(u<sub>n</sub>-v<sub>n</sub>)=0</p>
+      </div>
+      <div class="reminder-block">
+        <h4>مثال</h4>
+        <p>لتكن المتتالية <span class="math">(u<sub>n</sub>)</span> المعرفة على <span class="math">ℕ*</span> كما يلي:</p>
+        <p class="math-equation">u<sub>n</sub>=1+1/2<sup>2</sup>+1/3<sup>2</sup>+...+1/n<sup>2</sup></p>
+        <p>ولتكن المتتالية <span class="math">(v<sub>n</sub>)</span> المعرفة على <span class="math">ℕ*</span> كما يلي:</p>
+        <p class="math-equation">v<sub>n</sub>=u<sub>n</sub>+1/n</p>
+        <p>من الجدول أو البيان يمكن تخمين أن المتتاليتين متجاورتان، ثم نثبت ذلك جبريا.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>1. رتابة المتتالية u</h4>
+        <p>نحسب الفرق:</p>
+        <p class="math-equation">u<sub>n+1</sub>-u<sub>n</sub>=1/(n+1)<sup>2</sup></p>
+        <p>وبما أن <span class="math">1/(n+1)<sup>2</sup>&gt;0</span> من أجل كل <span class="math">n∈ℕ*</span>، فإن <span class="math">(u<sub>n</sub>)</span> متزايدة على <span class="math">ℕ*</span>.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>2. رتابة المتتالية v</h4>
+        <p>لدينا:</p>
+        <p class="math-equation">v<sub>n+1</sub>-v<sub>n</sub> = (u<sub>n+1</sub>-u<sub>n</sub>) + 1/(n+1) - 1/n</p>
+        <p>وبالتعويض:</p>
+        <p class="math-equation">v<sub>n+1</sub>-v<sub>n</sub> = 1/(n+1)<sup>2</sup> + 1/(n+1) - 1/n</p>
+        <p>نوحد المقامات فنحصل على:</p>
+        <p class="math-equation">v<sub>n+1</sub>-v<sub>n</sub> = -1/[n(n+1)<sup>2</sup>]</p>
+        <p>إذن <span class="math">v<sub>n+1</sub>-v<sub>n</sub>&lt;0</span>، ومنه <span class="math">(v<sub>n</sub>)</span> متناقصة على <span class="math">ℕ*</span>.</p>
+      </div>
+      <div class="reminder-block">
+        <h4>3. نهاية الفرق</h4>
+        <p>من تعريف <span class="math">v_n</span> لدينا:</p>
+        <p class="math-equation">v<sub>n</sub>-u<sub>n</sub>=1/n</p>
+        <p>وبما أن:</p>
+        <p class="math-equation">lim<sub>n→+∞</sub> 1/n = 0</p>
+        <p>فإن:</p>
+        <p class="math-equation">lim<sub>n→+∞</sub>(v<sub>n</sub>-u<sub>n</sub>)=0</p>
+      </div>
+      <div class="reminder-block">
+        <h4>النتيجة</h4>
+        <p>بما أن <span class="math">(u<sub>n</sub>)</span> متزايدة، و<span class="math">(v<sub>n</sub>)</span> متناقصة، والفرق بينهما يؤول إلى <span class="math">0</span>، فإن المتتاليتين <span class="math">(u<sub>n</sub>)</span> و<span class="math">(v<sub>n</sub>)</span> متجاورتان.</p>
+        <p><strong>خاصية:</strong> إذا كانت <span class="math">(u<sub>n</sub>)</span> و<span class="math">(v<sub>n</sub>)</span> متتاليتين متجاورتين فهما متقاربتان ولهما نفس النهاية.</p>
+      </div>
+    </section>`,    formulas: ["uₙ₊₁ - uₙ ≥ 0 ⇒ u متزايدة", "uₙ₊₁ - uₙ ≤ 0 ⇒ u متناقصة"],
+    scienceExercises: [
+      {
+        title: "تمرين محلول",
+        statementHtml: `<p>لتكن المتتاليتان <span class="math">(u<sub>n</sub>)</span> و<span class="math">(v<sub>n</sub>)</span> المعرفتان كما يلي:</p><p class="math-equation">u<sub>0</sub>=12, &nbsp; v<sub>0</sub>=1</p><p class="math-equation">u<sub>n+1</sub>=(u<sub>n</sub>+2v<sub>n</sub>)/3, &nbsp; v<sub>n+1</sub>=(u<sub>n</sub>+3v<sub>n</sub>)/4</p><p>نضع من أجل كل عدد طبيعي <span class="math">n</span>:</p><p class="math-equation">w<sub>n</sub>=u<sub>n</sub>-v<sub>n</sub>, &nbsp; t<sub>n</sub>=3u<sub>n</sub>+8v<sub>n</sub></p><ol><li>أثبت أن <span class="math">(w<sub>n</sub>)</span> متتالية هندسية يطلب تعيين أساسها وحدها الأول، ثم اكتب <span class="math">w<sub>n</sub></span> بدلالة <span class="math">n</span> وما هي نهايتها؟</li><li>أثبت أن <span class="math">(t<sub>n</sub>)</span> متتالية ثابتة، ثم ما هي نهايتها؟</li><li>أثبت أن المتتاليتين <span class="math">(u<sub>n</sub>)</span> و<span class="math">(v<sub>n</sub>)</span> متجاورتان.</li><li>استنتج نهايتي <span class="math">u<sub>n</sub></span> و<span class="math">v<sub>n</sub></span>.</li></ol>`,
+        quickSolution: `<p><span class="math">w<sub>n+1</sub>=1/12 w<sub>n</sub></span> و<span class="math">w<sub>0</sub>=11</span>، إذن <span class="math">w<sub>n</sub>=11(1/12)<sup>n</sup></span> و<span class="math">lim w<sub>n</sub>=0</span>.</p><p><span class="math">t<sub>n+1</sub>=t<sub>n</sub></span> و<span class="math">t<sub>0</sub>=44</span>، إذن <span class="math">t<sub>n</sub>=44</span>.</p><p><span class="math">(u_n)</span> متناقصة و<span class="math">(v_n)</span> متزايدة و<span class="math">u_n-v_n→0</span>، فهما متجاورتان. ومن <span class="math">3l+8l=44</span> نجد <span class="math">lim u_n=lim v_n=4</span>.</p>`,
+        solution: `<p><strong>1)</strong> نحسب:</p><p class="math-equation">w<sub>n+1</sub>=u<sub>n+1</sub>-v<sub>n+1</sub></p><p class="math-equation">w<sub>n+1</sub>=(u<sub>n</sub>+2v<sub>n</sub>)/3-(u<sub>n</sub>+3v<sub>n</sub>)/4</p><p class="math-equation">w<sub>n+1</sub>=(4u<sub>n</sub>+8v<sub>n</sub>-3u<sub>n</sub>-9v<sub>n</sub>)/12=(u<sub>n</sub>-v<sub>n</sub>)/12=w<sub>n</sub>/12</p><p>إذن <span class="math">(w_n)</span> هندسية أساسها <span class="math">q=1/12</span>، وحدها الأول:</p><p class="math-equation">w<sub>0</sub>=u<sub>0</sub>-v<sub>0</sub>=12-1=11</p><p>ومنه:</p><p class="math-equation">w<sub>n</sub>=11(1/12)<sup>n</sup></p><p>وبما أن <span class="math">|1/12|&lt;1</span> فإن:</p><p class="math-equation">lim w<sub>n</sub>=0</p><p><strong>2)</strong> نحسب:</p><p class="math-equation">t<sub>n+1</sub>=3u<sub>n+1</sub>+8v<sub>n+1</sub></p><p class="math-equation">t<sub>n+1</sub>=3(u<sub>n</sub>+2v<sub>n</sub>)/3+8(u<sub>n</sub>+3v<sub>n</sub>)/4</p><p class="math-equation">t<sub>n+1</sub>=u<sub>n</sub>+2v<sub>n</sub>+2u<sub>n</sub>+6v<sub>n</sub>=3u<sub>n</sub>+8v<sub>n</sub>=t<sub>n</sub></p><p>إذن <span class="math">(t_n)</span> ثابتة، وحدها الأول:</p><p class="math-equation">t<sub>0</sub>=3×12+8×1=44</p><p>ومنه <span class="math">t_n=44</span> ونهايتها <span class="math">44</span>.</p><p><strong>3)</strong> ندرس رتابة المتتاليتين. لدينا:</p><p class="math-equation">u<sub>n+1</sub>-u<sub>n</sub>=(u<sub>n</sub>+2v<sub>n</sub>)/3-u<sub>n</sub>=-2(u<sub>n</sub>-v<sub>n</sub>)/3=-2w<sub>n</sub>/3</p><p>وبما أن <span class="math">w_n=11(1/12)^n&gt;0</span> فإن <span class="math">u<sub>n+1</sub>-u<sub>n</sub>&lt;0</span>، إذن <span class="math">(u_n)</span> متناقصة.</p><p>كما أن:</p><p class="math-equation">v<sub>n+1</sub>-v<sub>n</sub>=(u<sub>n</sub>+3v<sub>n</sub>)/4-v<sub>n</sub>=(u<sub>n</sub>-v<sub>n</sub>)/4=w<sub>n</sub>/4</p><p>وبما أن <span class="math">w_n&gt;0</span> فإن <span class="math">v<sub>n+1</sub>-v<sub>n</sub>&gt;0</span>، إذن <span class="math">(v_n)</span> متزايدة.</p><p>وأخيرا:</p><p class="math-equation">u<sub>n</sub>-v<sub>n</sub>=w<sub>n</sub>→0</p><p>إذن المتتاليتان <span class="math">(u_n)</span> و<span class="math">(v_n)</span> متجاورتان.</p><p><strong>4)</strong> بما أن المتتاليتين متجاورتان فهما متقاربتان ولهما نفس النهاية. نرمز لها بـ <span class="math">l</span>. وبما أن <span class="math">t_n=3u_n+8v_n=44</span>، نمر إلى النهاية:</p><p class="math-equation">3l+8l=44</p><p class="math-equation">11l=44</p><p class="math-equation">l=4</p><p>إذن:</p><p class="math-equation">lim u<sub>n</sub>=lim v<sub>n</sub>=4</p>`,
+        detailedSolution: `<p><strong>الفكرة العامة:</strong> لإثبات التجاور نحتاج ثلاث نقاط: إحداهما متناقصة، الأخرى متزايدة، والفرق بينهما يؤول إلى الصفر.</p><p>لذلك عرّف التمرين <span class="math">w_n=u_n-v_n</span>. بعد الحساب نجد <span class="math">w_{n+1}=w_n/12</span>، أي أن الفرق نفسه هندسي ويتجه إلى <span class="math">0</span>.</p><p>ثم ندرس إشارات <span class="math">u_{n+1}-u_n</span> و<span class="math">v_{n+1}-v_n</span> باستعمال <span class="math">w_n&gt;0</span>. هذا يعطينا التناقص والتزايد.</p><p>أما <span class="math">t_n=3u_n+8v_n</span> فهو ثابت، ونستعمله في النهاية بعد أن نعلم أن النهايتين متساويتان.</p>`,
+        conceptHints: [
+          { title: "فرق المتتاليتين", hint: "ابدأ بحساب w_{n+1}=u_{n+1}-v_{n+1}. إذا حصلت على q w_n فإن w_n هندسية." },
+          { title: "إثبات التجاور", hint: "استعمل إشارة w_n لإثبات أن u_n متناقصة وv_n متزايدة، ثم استعمل نهاية w_n." },
+          { title: "النهاية المشتركة", hint: "بعد إثبات التجاور، ضع النهاية المشتركة l واستعمل العلاقة الثابتة t_n=44." }
+        ]
+      }
+    ],    activities: [
       { title: "نشاط", text: "ادرس رتابة uₙ = 2n + 7.", answer: "uₙ₊₁-uₙ=2>0، إذن المتتالية متزايدة تماما." }
     ],
     exercises: [
@@ -127,6 +396,105 @@ const modules = [
       "النهايات المرجعية مثل 1/n و qⁿ عندما |q|<1 تستعمل كثيرا في حساب النهايات.",
       "إذا غلب حد من درجة أعلى في عبارة كثيرة حدود، فإنه يحدد السلوك عند اللانهاية."
     ],
+    scienceTitle: "أعمال موجهة",
+    hideTabs: true,
+    scienceSummary: "مساحة مخصصة لأعمال موجهة وتمارين تطبيقية في المتتاليات العددية.",
+    scienceLessonOnly: true,
+    scienceLessonHtml: `<section class="lesson-reminder">
+      <h3>أعمال موجهة</h3>
+      <div class="reminder-block">
+        <h4>دراسة متتالية تراجعية من الشكل <span class="math">u<sub>n+1</sub>=f(u<sub>n</sub>)</span></h4>
+        <p><strong>دراسة مثال:</strong> نريد دراسة المتتالية <span class="math">(u<sub>n</sub>)</span> المعرفة بحدها الأول <span class="math">u<sub>0</sub>=0</span> ومن أجل كل عدد طبيعي <span class="math">n</span>:</p>
+        <p class="math-equation">u<sub>n+1</sub>=1/2 u<sub>n</sub>+3</p>
+        <ol>
+          <li>احسب الحدود الأولى للمتتالية <span class="math">(u<sub>n</sub>)</span>.</li>
+          <li>ضع تخمينا حول اتجاه تغير المتتالية <span class="math">(u<sub>n</sub>)</span> وحول تقاربها.</li>
+          <li>لتكن الدالة <span class="math">f</span> المعرفة على <span class="math">ℝ</span> بـ: <span class="math">f(x)=1/2x+3</span>. أرسم التمثيل البياني للدالة <span class="math">f</span> والمستقيم <span class="math">D: y=x</span> في معلم متعامد ومتجانس.</li>
+          <li>ضع على الرسم الحدود <span class="math">u<sub>0</sub></span>، <span class="math">u<sub>1</sub></span>، <span class="math">u<sub>2</sub></span>، <span class="math">u<sub>3</sub></span>. هل تخمينك حول الحدود صحيح؟</li>
+          <li>احسب العدد <span class="math">α</span> فاصلة نقطة تقاطع المنحنى والمستقيم <span class="math">D</span>.</li>
+          <li>نضع <span class="math">v<sub>n</sub>=u<sub>n</sub>-α</span>. بيّن أن <span class="math">(v<sub>n</sub>)</span> متتالية هندسية.</li>
+          <li>استنتج عبارة <span class="math">v<sub>n</sub></span> ثم عبارة <span class="math">u<sub>n</sub></span>.</li>
+        </ol>
+      </div>
+      <div class="reminder-block">
+        <h4>الحالة العامة</h4>
+        <p>لتكن المتتالية التراجعية <span class="math">(u<sub>n</sub>)</span> المعرفة بحدها الأول <span class="math">u<sub>0</sub></span> وبالعلاقة:</p>
+        <p class="math-equation">u<sub>n+1</sub>=a u<sub>n</sub>+b</p>
+        <p>حيث <span class="math">a</span> و<span class="math">b</span> عددان حقيقيان.</p>
+        <ol>
+          <li>عيّن طبيعة المتتالية <span class="math">(u<sub>n</sub>)</span> إذا كان <span class="math">a=0</span>.</li>
+          <li>أثبت أنه إذا كان <span class="math">a=1</span> فإن المتتالية <span class="math">(u<sub>n</sub>)</span> حسابية، وعيّن أساسها.</li>
+          <li>نفرض <span class="math">a≠0</span> و<span class="math">a≠1</span>. أرسم في معلم متعامد ومتجانس المستقيمين <span class="math">D: y=x</span> و<span class="math">V: y=ax+b</span> حسب إشارة وترتيب <span class="math">a</span>، ثم أجب:
+            <br>ما هي إحداثيات نقطة تقاطع المستقيمين؟
+            <br>عيّن فاصلة نقطة التقاطع.</li>
+          <li>لتكن المتتالية <span class="math">(v<sub>n</sub>)</span> المعرفة كما يلي: <span class="math">v<sub>n</sub>=u<sub>n</sub>-α</span>. أثبت أن <span class="math">(v<sub>n</sub>)</span> متتالية هندسية، وعيّن أساسها.</li>
+          <li>استنتج عبارة <span class="math">v<sub>n</sub></span> ثم عبارة <span class="math">u<sub>n</sub></span> بدلالة <span class="math">n</span>.</li>
+          <li>أوجد الحدود الصريحة للمتتالية <span class="math">(u<sub>n</sub>)</span> بدلالة <span class="math">u<sub>0</sub></span>، ثم صحح أو برهن صحة هذا التعبير.</li>
+        </ol>
+      </div>
+      <div class="reminder-block">
+        <h4>متتالية متقاربة نحو العدد <span class="math">e</span></h4>
+        <p><strong>1. تعيين حصر للعدد <span class="math">e</span></strong></p>
+        <ol>
+          <li>لتكن الدالة العددية <span class="math">f</span> للمتغير الحقيقي <span class="math">x</span> المعرفة على <span class="math">ℝ</span> بـ: <span class="math">f(x)=e<sup>x</sup>-(1+x)</span>. ادرس تغيرات الدالة <span class="math">f</span>.</li>
+          <li>استنتج أنه من أجل كل عدد حقيقي <span class="math">x</span>: <span class="math">1+x≤e<sup>x</sup></span>.</li>
+          <li>باستعمال المتراجحة السابقة، أثبت أنه من أجل كل عدد حقيقي <span class="math">x&lt;1</span>:</li>
+        </ol>
+        <p class="math-equation">e<sup>x</sup> ≤ 1/(1-x)</p>
+        <p><strong>2. تعيين حصر للعدد <span class="math">e</span></strong></p>
+        <p>ليكن <span class="math">n</span> عددا طبيعيا غير معدوم.</p>
+        <ol>
+          <li>باستعمال المتراجحة <span class="math">1+x≤e<sup>x</sup></span>، أثبت أن:</li>
+        </ol>
+        <p class="math-equation">e ≤ (1+1/n)<sup>n</sup></p>
+        <ol start="2">
+          <li>باستعمال المتراجحة <span class="math">e<sup>x</sup>≤1/(1-x)</span>، أثبت أن:</li>
+        </ol>
+        <p class="math-equation">e ≤ (1+1/n)<sup>n+1</sup></p>
+        <p><strong>3. نهاية متتالية</strong></p>
+        <p>نعتبر المتتالية <span class="math">(u<sub>n</sub>)</span> المعرفة من أجل كل عدد طبيعي غير معدوم كما يلي:</p>
+        <p class="math-equation">u<sub>n</sub>=(1+1/n)<sup>n</sup></p>
+        <ol>
+          <li>أثبت أنه من أجل كل عدد طبيعي غير معدوم: <span class="math">0≤e-u<sub>n</sub>≤3/n</span>.</li>
+          <li>أثبت أن المتتالية <span class="math">(u<sub>n</sub>)</span> تتقارب نحو <span class="math">e</span>.</li>
+          <li>باستعمال الآلة الحاسبة، عيّن قيمة مقربة لكل من <span class="math">u<sub>100</sub></span>، <span class="math">u<sub>1000</sub></span>، <span class="math">u<sub>10000</sub></span>.</li>
+        </ol>
+        <p><strong>تطبيق</strong></p>
+        <p>لتكن المتتالية <span class="math">(u<sub>n</sub>)</span> المعرفة كما يلي:</p>
+        <p class="math-equation">u<sub>n</sub>=∑<sub>k=0</sub><sup>n</sup> 1/k! = 1/0! + 1/1! + 1/2! + ... + 1/n!</p>
+        <p>ولتكن المتتالية <span class="math">(v<sub>n</sub>)</span> المعرفة كما يلي:</p>
+        <p class="math-equation">v<sub>n</sub>=u<sub>n</sub>+1/(n·n!)</p>
+        <ol>
+          <li>أثبت أن المتتالية <span class="math">(u<sub>n</sub>)</span> متزايدة على <span class="math">ℕ</span>.</li>
+          <li>أثبت أن المتتالية <span class="math">(v<sub>n</sub>)</span> متناقصة على <span class="math">ℕ*</span>.</li>
+          <li>احسب <span class="math">lim(v<sub>n</sub>-u<sub>n</sub>)</span>. ماذا تستنتج؟</li>
+          <li>أثبت أن <span class="math">(u<sub>n</sub>)</span> و<span class="math">(v<sub>n</sub>)</span> متجاورتان.</li>
+        </ol>
+      </div>      <div class="reminder-block">
+        <h4>حساب مساحة</h4>
+        <p>المستوي منسوب إلى معلم متعامد ومتجانس <span class="math">(O;i,j)</span>. لتكن الدالة <span class="math">f</span> للمتغير الحقيقي <span class="math">x</span> المعرفة على <span class="math">]0,+∞[</span> بـ:</p>
+        <p class="math-equation">f(x)=1/x</p>
+        <p>وليكن <span class="math">(C_f)</span> تمثيلها البياني في المستوي المنسوب إلى المعلم <span class="math">(O;i,j)</span>.</p>
+        <p>نريد حساب مساحة الحيز المحدد بالمنحنى <span class="math">(C_f)</span> ومحور الفواصل والمستقيمين <span class="math">D: x=1</span> و<span class="math">D': x=2</span>.</p>
+        <p>نقسم القطعة <span class="math">[AB]</span> إلى <span class="math">n</span> أجزاء متساوية، حيث فاصلة <span class="math">A</span> هي <span class="math">1</span> وفاصلة <span class="math">B</span> هي <span class="math">2</span>.</p>
+        <p>نرمز بـ <span class="math">S</span> إلى مساحة الحيز المحصور، وبـ <span class="math">u_n</span> مجموع مساحات المستطيلات الداخلية، وبـ <span class="math">v_n</span> مجموع مساحات المستطيلات الخارجية، بحيث:</p>
+        <p class="math-equation">u<sub>n</sub> ≤ S ≤ v<sub>n</sub></p>
+        <ol>
+          <li>أثبت أنه من أجل كل عدد طبيعي <span class="math">n&gt;1</span>:</li>
+        </ol>
+        <p class="math-equation">u<sub>n</sub>=1/(n+1)+1/(n+2)+...+1/(2n)</p>
+        <p class="math-equation">v<sub>n</sub>=1/n+1/(n+1)+...+1/(2n-1)</p>
+        <ol start="2">
+          <li>أثبت أن المتتالية <span class="math">(u<sub>n</sub>)</span> متزايدة.</li>
+          <li>أثبت أن المتتالية <span class="math">(v<sub>n</sub>)</span> متناقصة.</li>
+          <li>احسب <span class="math">lim(v<sub>n</sub>-u<sub>n</sub>)</span>. ماذا تستنتج بالنسبة للمتتاليتين <span class="math">(u<sub>n</sub>)</span> و<span class="math">(v<sub>n</sub>)</span>؟</li>
+          <li>عين عددا طبيعيا <span class="math">p</span> حتى تكون قيمة <span class="math">S</span> مقربة إلى <span class="math">10<sup>-2</sup></span>.</li>
+          <li>عين عددا طبيعيا <span class="math">q</span> حتى تكون قيمة <span class="math">S</span> مقربة إلى <span class="math">10<sup>-3</sup></span>.</li>
+          <li>باستعمال الحاسبة، احسب قيما تقريبية لـ <span class="math">u<sub>50</sub></span>، <span class="math">u<sub>100</sub></span>، و<span class="math">u<sub>500</sub></span>.</li>
+        </ol>
+      </div>    </section>`,
+    scienceActivities: [],
+    scienceExercises: [],
     formulas: ["lim 1/n = 0", "إذا |q|<1 فإن lim qⁿ = 0", "lim (an+b)/(cn+d) = a/c إذا c ≠ 0"],
     activities: [
       { title: "نشاط", text: "احسب نهاية uₙ = (3n+1)/(n+2).", answer: "النهاية هي 3." }
@@ -174,6 +542,50 @@ const modules = [
   }
 ];
 
+const sciencePracticeExercises = [
+  {
+    title: "تمرين 1",
+    statementHtml: `<p>في كل حالة من الحالات التالية، عيّن الحدود الأولى للمتتالية <span class="math">(u<sub>n</sub>)</span> ثم احسبها دون إيجاد حدود لاحقة كثيرة:</p><ol><li><span class="math">u<sub>0</sub>=2</span> و <span class="math">u<sub>n+1</sub>=1/2 u<sub>n</sub>-3</span>.</li><li><span class="math">u<sub>0</sub>=1</span> و <span class="math">u<sub>n+1</sub>=1/2 u<sub>n</sub></span>.</li><li><span class="math">u<sub>1</sub>=1</span> و <span class="math">u<sub>n</sub>=u<sub>n-1</sub>+2</span>.</li></ol>`,
+    quickSolution: `<p><strong>1)</strong> <span class="math">u<sub>n</sub>=-6+8(1/2)<sup>n</sup>=-6+2<sup>3-n</sup></span>.</p><p><strong>2)</strong> <span class="math">u<sub>n</sub>=(1/2)<sup>n</sup></span>.</p><p><strong>3)</strong> <span class="math">u<sub>n</sub>=2n-1</span>.</p>`,
+    solution: `<p><strong>1)</strong> العلاقة من الشكل <span class="math">u<sub>n+1</sub>=au<sub>n</sub>+b</span>. نبحث عن النقطة الثابتة:</p><p class="math-equation">L=(1/2)L-3 ⇔ L=-6</p><p>نضع <span class="math">v<sub>n</sub>=u<sub>n</sub>-L=u<sub>n</sub>+6</span>. فإن <span class="math">v<sub>n+1</sub>=(1/2)v<sub>n</sub></span>، أي <span class="math">(v<sub>n</sub>)</span> هندسية أساسها <span class="math">1/2</span> وحدها الأول <span class="math">v<sub>0</sub>=8</span>.</p><p class="math-equation">v<sub>n</sub>=8(1/2)<sup>n</sup> ⇒ u<sub>n</sub>=-6+8(1/2)<sup>n</sup>=-6+2<sup>3-n</sup></p><p><strong>2)</strong> المتتالية هندسية أساسها <span class="math">1/2</span> وحدها الأول <span class="math">1</span>:</p><p class="math-equation">u<sub>n</sub>=(1/2)<sup>n</sup></p><p><strong>3)</strong> المتتالية حسابية أساسها <span class="math">2</span> وحدها الأول <span class="math">u<sub>1</sub>=1</span>:</p><p class="math-equation">u<sub>n</sub>=u<sub>1</sub>+(n-1)×2=1+2n-2=2n-1</p>`
+  },
+  {
+    title: "تمرين 2",
+    statementHtml: `<p>لتكن <span class="math">(u<sub>n</sub>)</span> متتالية حسابية. نعرّف من أجل كل عدد طبيعي <span class="math">n</span> المتتاليتين:</p><p class="math-equation">w<sub>n</sub>=u<sub>3n</sub>+√7</p><p class="math-equation">v<sub>n</sub>=3/5 u<sub>n</sub>-1/2</p><p>بيّن أن المتتاليتين <span class="math">(w<sub>n</sub>)</span> و<span class="math">(v<sub>n</sub>)</span> حسابيتان، مع تعيين أساس كل منهما بدلالة أساس <span class="math">(u<sub>n</sub>)</span>.</p>`,
+    quickSolution: `<p><span class="math">(w<sub>n</sub>)</span> حسابية أساسها <span class="math">3r</span>؛ <span class="math">(v<sub>n</sub>)</span> حسابية أساسها <span class="math">3r/5</span>.</p>`,
+    solution: `<p>لنرمز بـ <span class="math">r</span> لأساس <span class="math">(u<sub>n</sub>)</span>. لدينا <span class="math">u<sub>n</sub>=u<sub>0</sub>+nr</span>.</p><p><strong>1)</strong> احسب الفرق:</p><p class="math-equation">w<sub>n+1</sub>-w<sub>n</sub>=u<sub>3(n+1)</sub>-u<sub>3n</sub>=u<sub>3n+3</sub>-u<sub>3n</sub>=3r</p><p>إذن <span class="math">(w<sub>n</sub>)</span> حسابية أساسها <span class="math">3r</span>.</p><p><strong>2)</strong> بالطريقة نفسها:</p><p class="math-equation">v<sub>n+1</sub>-v<sub>n</sub>=(3/5)u<sub>n+1</sub>-1/2-[(3/5)u<sub>n</sub>-1/2]=(3/5)(u<sub>n+1</sub>-u<sub>n</sub>)=3r/5</p><p>إذن <span class="math">(v<sub>n</sub>)</span> حسابية أساسها <span class="math">3r/5</span>.</p>`
+  },
+  {
+    title: "تمرين 3",
+    statementHtml: `<p>احسب أقياس زوايا مثلث قائم، حيث هذه الأقياس تشكل حدودا متتابعة لمتتالية حسابية.</p>`,
+    quickSolution: `<p>أقياس الزوايا هي <span class="math">30°</span> و <span class="math">60°</span> و <span class="math">90°</span>.</p>`,
+    solution: `<p>لتكن الزوايا الثلاث <span class="math">a-r</span>، <span class="math">a</span>، <span class="math">a+r</span> حيث <span class="math">a</span> هو الحد الأوسط و<span class="math">r</span> الأساس.</p><p>مجموع زوايا المثلث يساوي <span class="math">180°</span>:</p><p class="math-equation">(a-r)+a+(a+r)=3a=180° ⇒ a=60°</p><p>بما أن المثلث قائم، فإحدى زواياه تساوي <span class="math">90°</span>. الزاوية الكبرى هي <span class="math">a+r=60°+r</span>، إذن:</p><p class="math-equation">60°+r=90° ⇒ r=30°</p><p>وبالتالي أقياس الزوايا هي:</p><p class="math-equation">30°، 60°، 90°</p>`
+  },
+  {
+    title: "تمرين 4",
+    statementHtml: `<p>لتكن <span class="math">(v<sub>n</sub>)</span> متتالية هندسية أساسها <span class="math">q</span> و<span class="math">v<sub>0</sub>=1</span>. من أجل كل عدد طبيعي <span class="math">n</span> نضع:</p><p class="math-equation">u<sub>n</sub>=v<sub>n</sub>/v<sub>n+1</sub></p><ol><li>برهن أن <span class="math">v<sub>n</sub>&gt;0</span> من أجل كل عدد طبيعي <span class="math">n</span>.</li><li>برهن أن المتتالية <span class="math">(u<sub>n</sub>)</span> متتالية حسابية.</li></ol>`,
+    quickSolution: `<p><strong>1)</strong> <span class="math">v<sub>n</sub>=q<sup>n</sup>&gt;0</span>.</p><p><strong>2)</strong> <span class="math">u<sub>n</sub>=1/q</span> ثابتة، إذن حسابية.</p>`,
+    solution: `<p><strong>1)</strong> بما أن <span class="math">(v<sub>n</sub>)</span> هندسية أساسها <span class="math">q</span> وحدها الأول <span class="math">v<sub>0</sub>=1</span>، فإن:</p><p class="math-equation">v<sub>n</sub>=q<sup>n</sup></p><p>ولأن <span class="math">q&gt;0</span> (شرط ضروري لبقاء الحدود موجبة)، فإن <span class="math">q<sup>n</sup>&gt;0</span> لكل <span class="math">n∈ℕ</span>. إذن <span class="math">v<sub>n</sub>&gt;0</span>.</p><p><strong>2)</strong> لدينا:</p><p class="math-equation">u<sub>n</sub>=v<sub>n</sub>/v<sub>n+1</sub>=q<sup>n</sup>/q<sup>n+1</sup>=1/q</p><p>وبالتالي <span class="math">u<sub>n+1</sub>-u<sub>n</sub>=1/q-1/q=0</span> لكل <span class="math">n</span>. إذن <span class="math">(u<sub>n</sub>)</span> متتالية حسابية أساسها <span class="math">0</span>.</p>`
+  },
+  {
+    title: "تمرين 5",
+    statementHtml: `<p>لتكن <span class="math">(u<sub>n</sub>)</span> متتالية حسابية حيث:</p><p class="math-equation">u<sub>3</sub>=13, &nbsp; u<sub>7</sub>=37</p><p>عيّن أساس المتتالية وحدها الأول، ثم اكتب عبارتها العامة.</p>`,
+    quickSolution: `<p>الأساس <span class="math">r=6</span>، <span class="math">u<sub>0</sub>=-5</span>، <span class="math">u<sub>n</sub>=6n-5</span>.</p>`,
+    solution: `<p>لنرمز بالأساس بـ <span class="math">r</span>. لدينا:</p><p class="math-equation">u<sub>7</sub>-u<sub>3</sub>=(7-3)r=4r</p><p>وبالتعويض عن القيم المعطاة:</p><p class="math-equation">4r=37-13=24 ⇒ r=6</p><p>نستعمل العلاقة <span class="math">u<sub>3</sub>=u<sub>0</sub>+3r</span>:</p><p class="math-equation">13=u<sub>0</sub>+18 ⇒ u<sub>0</sub>=-5</p><p>إذن العبارة العامة هي:</p><p class="math-equation">u<sub>n</sub>=u<sub>0</sub>+nr=-5+6n=6n-5</p>`
+  },
+  {
+    title: "تمرين 6",
+    statementHtml: `<p>لتكن <span class="math">(u<sub>n</sub>)</span> متتالية حسابية أساسها <span class="math">3</span> و<span class="math">u<sub>1</sub>=-2</span>.</p><ol><li>اكتب <span class="math">u<sub>n</sub></span> بدلالة <span class="math">n</span>.</li><li>احسب <span class="math">u<sub>1</sub>+u<sub>2</sub>+...+u<sub>20</sub></span>.</li></ol>`,
+    quickSolution: `<p><strong>1)</strong> <span class="math">u<sub>n</sub>=3n-5</span>.</p><p><strong>2)</strong> المجموع يساوي <span class="math">530</span>.</p>`,
+    solution: `<p><strong>1)</strong> المتتالية حسابية أساسها <span class="math">r=3</span>. لدينا:</p><p class="math-equation">u<sub>n</sub>=u<sub>1</sub>+(n-1)r=-2+3(n-1)=3n-5</p><p><strong>2)</strong> نحسب <span class="math">u<sub>20</sub></span>:</p><p class="math-equation">u<sub>20</sub>=3×20-5=55</p><p>مجموع 20 حدًا من المتتالية الحسابية:</p><p class="math-equation">S=20/2×(u<sub>1</sub>+u<sub>20</sub>)=10×(-2+55)=10×53=530</p>`
+  },
+  {
+    title: "تمرين 7",
+    statementHtml: `<p>احسب المجموع:</p><p class="math-equation">S=1/2+1+3/2+2+5/2+...+10</p>`,
+    quickSolution: `<p><span class="math">S=105</span>.</p>`,
+    solution: `<p>المجموع هو مجموع متتالية حسابية أولها <span class="math">1/2</span> وأساسها <span class="math">1/2</span> وآخرها <span class="math">10</span>.</p><p>لنحسب عدد الحدود <span class="math">n</span>:</p><p class="math-equation">1/2+(n-1)×1/2=10 ⇒ n/2=10 ⇒ n=20</p><p>إذن:</p><p class="math-equation">S=20/2×(1/2+10)=10×21/2=105</p>`
+  }
+];
 const bacExercises = [
   {
     id: "bac-2018-math-subject-1",
@@ -1837,24 +2249,32 @@ const bacExercises = [
     year: "2008",
     title: "بكالوريا 2008 - تقني رياضي - الموضوع الثاني",
     figureHtml: `<figure class="bac-figure" aria-label="تمثيل بياني تقريبي للدالة f والمستقيمين y=x و y=x-2">
-      <svg class="bac-graph" viewBox="0 0 420 300" role="img">
-        <rect x="0" y="0" width="420" height="300" rx="10" class="graph-bg"></rect>
-        <line x1="58" y1="246" x2="370" y2="246" class="axis"></line>
-        <line x1="58" y1="246" x2="58" y2="34" class="axis"></line>
-        <line x1="86" y1="246" x2="340" y2="54" class="graph-line muted"></line>
-        <line x1="142" y1="246" x2="368" y2="76" class="graph-line dashed"></line>
-        <path d="M60 34 C76 88, 104 152, 142 178 C180 204, 222 194, 270 158 C310 128, 344 100, 368 82" class="graph-curve"></path>
-        <polyline points="142,246 142,178 232,178 232,164 258,164 258,153 276,153" class="graph-stair"></polyline>
-        <circle cx="142" cy="246" r="4" class="graph-point"></circle>
-        <circle cx="232" cy="178" r="4" class="graph-point"></circle>
-        <circle cx="258" cy="164" r="4" class="graph-point"></circle>
-        <text x="346" y="55" class="graph-label">y=x</text>
-        <text x="322" y="92" class="graph-label">Δ: y=x-2</text>
-        <text x="286" y="142" class="graph-label">C_f</text>
-        <text x="136" y="264" class="graph-label">u0=1</text>
-        <text x="224" y="264" class="graph-label">u1</text>
-        <text x="252" y="264" class="graph-label">u2</text>
-        <text x="272" y="264" class="graph-label">5/2</text>
+      <svg class="bac-graph" viewBox="0 0 420 310" role="img">
+        <rect x="0" y="0" width="420" height="310" rx="10" class="graph-bg"></rect>
+        <g class="grid-lines">
+          <path d="M70 40V260 M115 40V260 M160 40V260 M205 40V260 M250 40V260 M295 40V260 M340 40V260"></path>
+          <path d="M45 240H375 M45 200H375 M45 160H375 M45 120H375 M45 80H375"></path>
+        </g>
+        <line x1="45" y1="240" x2="380" y2="240" class="axis"></line>
+        <line x1="70" y1="270" x2="70" y2="35" class="axis"></line>
+        <line x1="70" y1="240" x2="340" y2="60" class="graph-line"></line>
+        <line x1="160" y1="240" x2="365" y2="104" class="graph-line dashed"></line>
+        <path d="M74 42 C82 86, 102 148, 132 184 C158 214, 194 222, 228 204 C260 187, 292 150, 328 92" class="graph-curve"></path>
+        <polyline points="115,240 115,160 205,160 205,120 250,120 250,100 272,100" class="graph-stair"></polyline>
+        <line x1="115" y1="240" x2="115" y2="270" class="graph-line muted"></line>
+        <line x1="205" y1="240" x2="205" y2="270" class="graph-line muted"></line>
+        <line x1="250" y1="240" x2="250" y2="270" class="graph-line muted"></line>
+        <line x1="272" y1="240" x2="272" y2="270" class="graph-line muted"></line>
+        <circle cx="115" cy="240" r="4" class="graph-point"></circle>
+        <circle cx="205" cy="160" r="4" class="graph-point"></circle>
+        <circle cx="250" cy="120" r="4" class="graph-point"></circle>
+        <text x="332" y="58" class="graph-label">y=x</text>
+        <text x="282" y="112" class="graph-label">Δ: y=x-2</text>
+        <text x="226" y="194" class="graph-label">C_f</text>
+        <text x="103" y="292" class="graph-label">u0=1</text>
+        <text x="195" y="292" class="graph-label">u1=2</text>
+        <text x="238" y="292" class="graph-label">u2</text>
+        <text x="265" y="292" class="graph-label">5/2</text>
       </svg>
       <figcaption>رسم تقريبي للمنحنى <span class="math">C_f</span> مع المستقيمين <span class="math">y=x</span> و<span class="math">Δ:y=x-2</span>، وبداية إنشاء حدود المتتالية من <span class="math">u_0=1</span>.</figcaption>
     </figure>`,
@@ -6020,13 +6440,17 @@ function setBranch(branch) {
 function renderModules() {
   const grid = document.getElementById("moduleGrid");
   if (!grid) return;
-  grid.innerHTML = activeModules().map((m) => `
+  grid.innerHTML = activeModules().map((m) => {
+    const cardTitle = state.branch === "science" && m.scienceTitle ? m.scienceTitle : state.branch === "management" && m.managementTitle ? m.managementTitle : m.title;
+    const cardSummary = state.branch === "science" && m.scienceSummary ? m.scienceSummary : state.branch === "management" && m.managementSummary ? m.managementSummary : m.summary;
+    return `
     <article class="lesson-card">
       <div class="card-tags"><span class="tag">الدرس ${m.order}</span><span class="tag ${isDone(m.id) ? "done" : ""}">${isDone(m.id) ? "منجز" : "في الانتظار"}</span></div>
-      <h2>${m.title}</h2><p>${m.summary}</p>
+      <h2>${cardTitle}</h2><p>${cardSummary}</p>
       <div class="quick-tabs"><button type="button" data-open-module="${m.id}" data-tab="lesson">الدرس</button><button type="button" data-open-module="${m.id}" data-tab="activities">أنشطة</button><button type="button" data-open-module="${m.id}" data-tab="exercises">تمرين محلول</button></div>
       <button class="primary-action" type="button" data-open-module="${m.id}" data-tab="lesson">فتح الدرس</button>
-    </article>`).join("");
+    </article>`;
+  }).join("");
 }
 
 function renderModuleDetail() {
@@ -6035,16 +6459,24 @@ function renderModuleDetail() {
   const m = currentModule();
   if (!m) return;
   const tab = state.moduleTab;
-  const tabs = ["lesson", "activities", "exercises"].map((name) => `<button class="${tab === name ? "active" : ""}" type="button" data-module-tab="${name}">${name === "lesson" ? "الدرس" : name === "activities" ? "أنشطة" : "تمرين محلول"}</button>`).join("");
+  const hideTabs = state.branch === "science" && m.hideTabs;
+  const activeTab = hideTabs ? "lesson" : tab;
+  const tabs = hideTabs ? "" : ["lesson", "activities", "exercises"].map((name) => `<button class="${activeTab === name ? "active" : ""}" type="button" data-module-tab="${name}">${name === "lesson" ? "Ø§Ù„Ø¯Ø±Ø³" : name === "activities" ? "Ø£Ù†Ø´Ø·Ø©" : "ØªÙ…Ø±ÙŠÙ† Ù…Ø­Ù„ÙˆÙ„"}</button>`).join("");
   let body = "";
-  if (tab === "lesson") {
-    body = `<div class="lesson-body">${m.lesson.map((p) => `<p>${p}</p>`).join("")}<div class="formula-grid">${m.formulas.map((f) => `<div class="formula-card">${f}</div>`).join("")}</div></div>`;
-  } else if (tab === "activities") {
-    body = m.activities.map((a, i) => `<section class="exercise-card"><span class="pill">${a.title}</span><p>${a.text}</p><button type="button" class="ghost-action" data-toggle-solution="${m.id}-act-${i}">إظهار الجواب</button><div class="solution ${state.openSolutions[`${m.id}-act-${i}`] ? "show" : ""}">${a.answer}</div></section>`).join("");
-  } else {
-    body = m.exercises.map((ex, i) => renderExerciseCard(ex, `${m.id}-ex-${i}`)).join("");
+  if (activeTab === "lesson") {
+    const branchLessonExtra = state.branch === "science" && m.scienceLessonHtml ? m.scienceLessonHtml : state.branch === "management" && m.managementLessonHtml ? m.managementLessonHtml : "";
+    const lessonParagraphs = (state.branch === "science" && m.scienceLessonOnly) || (state.branch === "management" && m.managementLessonOnly) ? [] : m.lesson;
+    const formulaItems = (state.branch === "science" && m.scienceLessonOnly) || (state.branch === "management" && m.managementLessonOnly) ? [] : m.formulas;
+    body = `<div class="lesson-body">${lessonParagraphs.map((p) => `<p>${p}</p>`).join("")}${branchLessonExtra}<div class="formula-grid">${formulaItems.map((f) => `<div class="formula-card">${f}</div>`).join("")}</div></div>`;
+  } else if (activeTab === "activities") {
+    const activityList = state.branch === "science" && m.scienceLessonOnly ? (m.scienceActivities || []) : m.activities;
+    body = activityList.length ? activityList.map((a, i) => `<section class="exercise-card"><span class="pill">${a.title}</span><p>${a.text}</p><button type="button" class="ghost-action" data-toggle-solution="${m.id}-act-${i}">إظهار الجواب</button><div class="solution ${state.openSolutions[`${m.id}-act-${i}`] ? "show" : ""}">${a.answer}</div></section>`).join("") : `<section class="exercise-card"><p>لا توجد أنشطة مضافة لهذا الدرس حاليا.</p></section>`;  } else {
+    const exerciseList = state.branch === "science" && m.scienceExercises ? m.scienceExercises : m.exercises;
+    body = exerciseList.map((ex, i) => renderExerciseCard(ex, `${m.id}-ex-${i}`)).join("");
   }
-  box.innerHTML = `<span class="pill">${branchLabels[state.branch]}</span><h2>${m.title}</h2><p>${m.summary}</p><div class="module-tabs">${tabs}</div>${body}<button class="primary-action" type="button" data-complete="${m.id}">${isDone(m.id) ? "تم إنجاز الدرس" : "تحديد كمنجز"}</button>`;
+  const moduleTitle = state.branch === "science" && m.scienceTitle ? m.scienceTitle : state.branch === "management" && m.managementTitle ? m.managementTitle : m.title;
+  const moduleSummary = state.branch === "science" && m.scienceSummary ? m.scienceSummary : state.branch === "management" && m.managementSummary ? m.managementSummary : m.summary;
+  box.innerHTML = `<span class="pill">${branchLabels[state.branch]}</span><h2>${moduleTitle}</h2><p>${moduleSummary}</p>${tabs ? `<div class="module-tabs">${tabs}</div>` : ""}${body}<button class="primary-action" type="button" data-complete="${m.id}">${isDone(m.id) ? "تم إنجاز الدرس" : "تحديد كمنجز"}</button>`;
 }
 
 function stripHtml(value = "") {
@@ -6193,8 +6625,8 @@ function renderBacCard(ex, id) {
 function renderPractice() {
   const list = document.getElementById("practiceList");
   if (!list) return;
-  const items = activeModules().flatMap((m) => m.exercises.map((ex, i) => ({...ex, title: `${m.title} - ${ex.title}`, id: `practice-${m.id}-${i}`})));
-  list.innerHTML = items.map((ex) => `<section class="exercise-card"><h3>${ex.title}</h3><p>${ex.text}</p></section>`).join("");
+  const items = state.branch === "science" ? sciencePracticeExercises.map((ex, i) => ({...ex, id: `practice-science-${i}`})) : activeModules().flatMap((m) => m.exercises.map((ex, i) => ({...ex, title: `${m.title} - ${ex.title}`, id: `practice-${m.id}-${i}`})));
+  list.innerHTML = items.map((ex) => renderExerciseCard(ex, ex.id)).join("");
 }
 
 function renderBac() {

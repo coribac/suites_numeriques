@@ -1417,6 +1417,12 @@ h1, h2, h3, h4, p { margin-top: 0; }
   background: #101719;
 }
 .graph-bg { fill: #101719; }
+.bac-graph path,
+.bac-graph polyline,
+.bac-graph line {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
 .grid-lines path {
   fill: none;
   stroke: rgba(220, 245, 255, .22);
@@ -1443,6 +1449,35 @@ h1, h2, h3, h4, p { margin-top: 0; }
   fill: none;
   stroke: var(--primary);
   stroke-width: 4;
+}
+.graph-line {
+  stroke: rgba(234, 250, 255, .9);
+  stroke-width: 2.5;
+}
+.graph-line.muted {
+  stroke: rgba(148, 163, 184, .82);
+  stroke-width: 1.5;
+}
+.graph-line.dashed {
+  stroke-dasharray: 8 7;
+}
+.graph-curve {
+  stroke: var(--primary);
+  stroke-width: 4;
+}
+.graph-stair {
+  stroke: #f7b733;
+  stroke-width: 2.5;
+  stroke-dasharray: 5 5;
+}
+.axis {
+  stroke: rgba(234, 250, 255, .82);
+  stroke-width: 2;
+}
+.graph-point {
+  fill: #f7fbff;
+  stroke: #071112;
+  stroke-width: 2;
 }
 .graph-points circle {
   fill: #f7fbff;
@@ -1563,4 +1598,52 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .bac-solution-text .math-equation {
   background: rgba(0,0,0,.18);
   border-inline-start-color: var(--accent);
+}
+
+.lesson-reminder {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+  padding: 16px;
+  border: 1px solid rgba(24, 214, 163, .28);
+  border-radius: 12px;
+  background: rgba(7, 22, 19, .55);
+}
+.lesson-reminder h3 {
+  margin: 0;
+  color: #7ee787;
+  text-align: center;
+  font-size: 22px;
+}
+.reminder-block {
+  padding: 12px 14px;
+  border: 1px solid rgba(126, 231, 135, .38);
+  border-radius: 10px;
+  background: rgba(190, 255, 137, .1);
+}
+.reminder-block h4 {
+  margin: 0 0 8px;
+  color: #ff6b6b;
+  font-size: 18px;
+}
+.reminder-block p {
+  margin: 6px 0;
+  color: #d9edf4;
+}
+.reminder-block .math-equation,
+.reminder-formulas span {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 8px 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(255, 235, 59, .88);
+  color: #171b0c;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+.reminder-formulas {
+  display: grid;
+  gap: 6px;
 }
