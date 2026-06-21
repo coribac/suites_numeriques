@@ -472,19 +472,43 @@ h1, h2, h3, h4, p { margin-top: 0; }
   font-weight: 800;
 }
 
+.math {
+  display: inline-block;
+  font-size: 1.06em;
+  line-height: 1;
+  vertical-align: baseline;
+  color: var(--ink);
+}
+
 .math-equation {
   width: fit-content;
   max-width: 100%;
-  margin: 10px 0;
-  padding: 10px 14px;
+  margin: 12px 0;
+  padding: 12px 18px;
   border-radius: 12px;
   background: rgba(0,0,0,.28);
   border: 1px solid var(--line);
+  border-inline-start: 3px solid var(--primary);
   color: #fff;
+  white-space: nowrap;
   overflow-x: auto;
+  font-size: 1.08em;
+  letter-spacing: .01em;
 }
-.math sup, .math-equation sup { font-size: .72em; vertical-align: .62em; }
-.math sub, .math-equation sub { font-size: .72em; vertical-align: -.25em; }
+
+.math-equation::-webkit-scrollbar { height: 6px; }
+.math-equation::-webkit-scrollbar-thumb { background: rgba(24,214,163,.35); border-radius: 3px; }
+
+.math sup, .math-equation sup {
+  font-size: .68em;
+  vertical-align: .55em;
+  line-height: 0;
+}
+.math sub, .math-equation sub {
+  font-size: .68em;
+  vertical-align: -.28em;
+  line-height: 0;
+}
 
 .pascal-wrap {
   display: grid;
@@ -1380,12 +1404,6 @@ h1, h2, h3, h4, p { margin-top: 0; }
   margin: 8px 0;
   background: rgba(0,0,0,.18);
 }
-.math {
-  direction: ltr;
-  unicode-bidi: isolate;
-  color: var(--ink);
-  font-weight: 800;
-}
 .bac-figure {
   margin: 8px 0 16px;
   max-width: 520px;
@@ -1519,4 +1537,30 @@ h1, h2, h3, h4, p { margin-top: 0; }
   margin: 0;
   padding: 0 10px 10px;
   color: var(--muted);
+}
+
+/* Bac card overrides to ensure intended styling wins over generic buttons */
+.bac-exercise-footer {
+  justify-content: flex-start;
+}
+
+.bac-exercise-card .bac-solution-toggle {
+  border-color: rgba(79,140,255,.35);
+  background: rgba(79,140,255,.10);
+  color: #7fb0ff;
+}
+
+.bac-exercise-card .bac-solution-toggle.active {
+  background: rgba(79,140,255,.25);
+  border-color: rgba(79,140,255,.65);
+  color: #fff;
+}
+
+.bac-exercise-text .math-equation {
+  max-width: 100%;
+}
+
+.bac-solution-text .math-equation {
+  background: rgba(0,0,0,.18);
+  border-inline-start-color: var(--accent);
 }
