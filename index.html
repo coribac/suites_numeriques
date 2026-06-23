@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Cache-Control" content="no-store">
   <title>المتتاليات العددية - تطبيق مستقل</title>
-  <link rel="stylesheet" href="styles.css?v=20260621-practice-solutions-v83">
+  <link rel="stylesheet" href="styles.css?v=20260622-fix-bac-figures-v122">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQRqzUOdgLfWgdrs1oEUpwi7s5xxGghSg2gJ8" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nLO44hBXtUUdqKDlLAKLl1rfdOG7DRyBxvDs+ln3h7I" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="app-shell">
@@ -55,7 +58,7 @@
 
       <section class="view" id="practiceView"><p class="section-note">تمارين غير محلولة للتدريب الذاتي</p><div id="practiceList" class="exercise-list"></div></section>
 
-      <section class="view" id="bacView"><p class="section-note">نماذج بكالوريا خاصة بالمتتاليات العددية</p><div class="filter-row"><label>الشعبة <select id="bacBranchFilter"><option value="mathematics">رياضيات</option><option value="technical_math">تقني رياضي</option><option value="experimental">علوم تجريبية</option></select></label><label>السنة <select id="bacYearFilter"></select></label></div><div id="bacList" class="exercise-list"></div></section>
+      <section class="view" id="bacView"><p class="section-note">نماذج بكالوريا خاصة بالمتتاليات العددية</p><div class="bac-layout"><div class="bac-door-tabs" id="bacDoorTabs"></div><div class="filter-row bac-filter-bar" id="bacFilterRow"><label id="bacTrackFilterLabel">المسار <select id="bacBranchFilter"><option value="mathematics">رياضيات</option><option value="technical_math">تقني رياضي</option><option value="experimental">علوم تجريبية</option></select></label><label>السنة <select id="bacYearFilter"></select></label></div><div id="bacList" class="exercise-list"></div></div></section>
 
       <section class="view" id="progressView"><section class="card"><span class="pill">تقدمي</span><h2>لوحة الإنجاز</h2><p id="progressSummary">لم تبدأ بعد.</p><div class="progress-list" id="progressList"></div></section></section>
 
@@ -69,6 +72,17 @@
       </section>
     </main>
   </div>
-  <script src="app.js?v=20260621-practice-solutions-v83"></script>
+  <script defer src="app.js?v=20260622-fix-math-corruption-v137"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

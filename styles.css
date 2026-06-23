@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   color-scheme: dark;
   --bg: #0b0f10;
   --surface: #141b1d;
@@ -508,6 +508,43 @@ h1, h2, h3, h4, p { margin-top: 0; }
   font-size: .68em;
   vertical-align: -.28em;
   line-height: 0;
+}
+
+/* KaTeX integration */
+.katex {
+  font-family: var(--font-math);
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-size: 1.06em;
+  line-height: 1.2;
+}
+.katex-display {
+  direction: ltr;
+  margin: 12px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.katex-display .katex {
+  font-size: 1.15em;
+}
+.katex .base {
+  color: inherit;
+}
+.bac-statement .katex,
+.solution-text .katex,
+.bac-solution-text .katex,
+.activity-text .katex {
+  color: var(--ink);
+}
+.bac-statement .katex-display,
+.solution-text .katex-display,
+.bac-solution-text .katex-display,
+.activity-text .katex-display {
+  background: rgba(0,0,0,.18);
+  border: 1px solid var(--line);
+  border-inline-start: 3px solid var(--primary);
+  border-radius: 12px;
+  padding: 12px 18px;
 }
 
 .pascal-wrap {
@@ -1646,4 +1683,29 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .reminder-formulas {
   display: grid;
   gap: 6px;
+}
+.bac-graph .axes,
+.bac-graph path.axes {
+  fill: none;
+  stroke: rgba(234, 250, 255, .82);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.graph-labels text,
+.bac-graph text {
+  fill: #d9edf4;
+  font-size: 15px;
+  font-weight: 800;
+}
+.bac-graph .point,
+.bac-graph circle.point {
+  fill: #f7fbff;
+  stroke: #071112;
+  stroke-width: 2;
+}
+.bac-graph .construction {
+  fill: none;
+  stroke: #f7b733;
+  stroke-width: 2.5;
+  vector-effect: non-scaling-stroke;
 }
